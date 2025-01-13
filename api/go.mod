@@ -5,7 +5,6 @@ toolchain go1.22.10
 
 require (
 	github.com/coreos/go-semver v0.3.1
-	github.com/go-piv/piv-go v1.11.0
 	github.com/gogo/protobuf v1.3.2
 	github.com/google/go-cmp v0.6.0
 	github.com/google/uuid v1.6.0
