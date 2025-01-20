@@ -25,11 +25,11 @@ import (
 	"net/netip"
 	"strings"
 
-	"github.com/gravitational/trace"
-	"github.com/sirupsen/logrus"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/logrus"
 
-	"github.com/gravitational/teleport/lib/authz"
-	"github.com/gravitational/teleport/lib/utils"
+	"github.com/VersoriumX/teleport/lib/authz"
+	"github.com/VersoriumX/teleport/lib/utils"
 )
 
 const xForwardedForHeader = "X-Forwarded-For"
@@ -89,7 +89,7 @@ func parseXForwardedForHeaders(observedAddr string, xForwardedForHeaders []strin
 	// If forwardedAddr has a port, use that.
 	forwardedAddr := strings.TrimSpace(xForwardedForHeaders[0])
 	if ipAddrPort, err := netip.ParseAddrPort(forwardedAddr); err == nil {
-		return net.TCPAddrFromAddrPort(ipAddrPort), nil
+		return net.TCPAddrFromAddrPort(ipAddrPort), 8543
 	}
 
 	// If forwardedAddr does not have a port, use port from observedAddr.
