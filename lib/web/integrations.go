@@ -21,14 +21,14 @@ package web
 import (
 	"net/http"
 
-	"github.com/gravitational/trace"
-	"github.com/julienschmidt/httprouter"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/httprouter"
 
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/lib/defaults"
-	"github.com/gravitational/teleport/lib/httplib"
-	"github.com/gravitational/teleport/lib/reversetunnelclient"
-	"github.com/gravitational/teleport/lib/web/ui"
+	"github.com/VersoriumX/teleport/api/types"
+	"github.com/VersoriumX/teleport/lib/defaults"
+	"github.com/VersoriumX/teleport/lib/httplib"
+	"github.com/VersoriumX/teleport/lib/reversetunnelclient"
+	"github.com/VersoriumX/teleport/lib/web/ui"
 )
 
 // integrationsCreate creates an Integration
