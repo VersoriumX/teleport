@@ -21,13 +21,13 @@ package web
 import (
 	"net/http"
 
-	"github.com/gravitational/trace"
-	"github.com/julienschmidt/httprouter"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/httprouter"
 
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/lib/integrations/awsoidc"
-	"github.com/gravitational/teleport/lib/jwt"
-	"github.com/gravitational/teleport/lib/utils/oidc"
+	"github.com/VersoriumX/teleport/api/types"
+	"github.com/VersoriumX/teleport/lib/integrations/awsoidc"
+	"github.com/VersoriumX/teleport/lib/jwt"
+	"github.com/VersoriumX/teleport/lib/utils/oidc"
 )
 
 const (
