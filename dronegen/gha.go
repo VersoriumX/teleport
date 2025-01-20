@@ -64,7 +64,7 @@ func ghaMultiBuildPipeline(setupSteps []step, ghaBuild ghaBuildType) pipeline {
 
 	checkoutPath := ghaBuild.checkoutPath
 	if checkoutPath == "" {
-		checkoutPath = "/go/src/github.com/gravitational/teleport"
+		checkoutPath = "/go/src/github.com/VersoriumX/teleport"
 	}
 
 	p.Steps = []step{
