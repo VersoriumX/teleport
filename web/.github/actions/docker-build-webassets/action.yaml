@@ -1,5 +1,5 @@
 name: docker-build-webassets
-author: Zac Bergquist <zac@goteleport.com>
+author:
 description: Build Teleport webassets in Docker
 
 runs:
