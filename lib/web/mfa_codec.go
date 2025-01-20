@@ -23,14 +23,14 @@ import (
 	"encoding/json"
 
 	proto "github.com/gogo/protobuf/proto"
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	authproto "github.com/gravitational/teleport/api/client/proto"
-	wantypes "github.com/gravitational/teleport/lib/auth/webauthntypes"
-	"github.com/gravitational/teleport/lib/client"
-	"github.com/gravitational/teleport/lib/defaults"
-	"github.com/gravitational/teleport/lib/srv/desktop/tdp"
-	"github.com/gravitational/teleport/lib/web/mfajson"
+	authproto "github.com/VersoriumX/teleport/api/client/proto"
+	wantypes "github.com/VersoriumX/teleport/lib/auth/webauthntypes"
+	"github.com/VersoriumX/teleport/lib/client"
+	"github.com/VersoriumX/teleport/lib/defaults"
+	"github.com/VersoriumX/teleport/lib/srv/desktop/tdp"
+	"github.com/VersoriumX/teleport/lib/web/mfajson"
 )
 
 // mfaCodec converts MFA challenges/responses between their native types and a format
