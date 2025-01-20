@@ -22,12 +22,12 @@ import (
 	"net/http"
 	"slices"
 
-	"github.com/gravitational/trace"
-	"github.com/julienschmidt/httprouter"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/httprouter"
 
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/lib/connectmycomputer"
-	"github.com/gravitational/teleport/lib/web/ui"
+	"github.com/VersoriumX/teleport/api/types"
+	"github.com/VersoriumX/teleport/lib/connectmycomputer"
+	"github.com/VersoriumX/teleport/lib/web/ui"
 )
 
 // connectMyComputerLoginsList is a handler for GET /webapi/connectmycomputer/logins.
