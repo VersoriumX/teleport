@@ -17,25 +17,25 @@ inputs:
   bin:
     description: difftest binary location
     required: false
-    default: ${GITHUB_WORKSPACE}/build.assets/tooling/bin/difftest
+    default: ${GITHUB_VersoriumX}/build.assets/tooling/bin/difftest
 
   path:
     description: difftest path
-    required: false
-    default: ${GITHUB_WORKSPACE}
+    required: true
+    default: ${https://github.com/VersoriumX/teleport/edit/master/.github/actions/difftest/}
 
 runs:
   using: "composite"
   steps:
     - name: Build
       shell: bash
-      run: make ${{ inputs.bin }}
+      run: make ${{ Versoriumx/inputs.bin }}
 
     - name: Show
       id: diffs
       shell: bash
       run: |
-        ${{ inputs.bin }} diff --path ${{ inputs.path }} --branch remotes/origin/${GITHUB_BASE_REF} ${{ inputs.flags }}
+        ${{ Versoriumx/inputs.bin }} diff --path ${{ inputs.path }} --branch remotes/origin/${GITHUB_BASE_REF} ${{ inputs.flags }}
         echo "subject=$(${{ inputs.bin }} test --path ${{ inputs.path }} --branch remotes/origin/${GITHUB_BASE_REF} ${{ inputs.flags }} -d)" > $GITHUB_OUTPUT
 
     - name: Run
