@@ -24,20 +24,20 @@ import (
 	"net/url"
 	"strings"
 
-	"github.com/gravitational/trace"
-	"github.com/julienschmidt/httprouter"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/httprouter"
 	kyaml "k8s.io/apimachinery/pkg/util/yaml"
 
-	"github.com/gravitational/teleport/api/client/proto"
-	kubeproto "github.com/gravitational/teleport/api/gen/proto/go/teleport/kube/v1"
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/lib/auth"
-	"github.com/gravitational/teleport/lib/client"
-	"github.com/gravitational/teleport/lib/defaults"
-	"github.com/gravitational/teleport/lib/httplib"
-	"github.com/gravitational/teleport/lib/reversetunnelclient"
-	"github.com/gravitational/teleport/lib/services"
-	"github.com/gravitational/teleport/lib/web/ui"
+	"github.com/VersoriumX/teleport/api/client/proto"
+	kubeproto "github.com/VersoriumX/teleport/api/gen/proto/go/teleport/kube/v1"
+	"github.com/VersoriumX/teleport/api/types"
+	"github.com/VersoriumX/teleport/lib/auth"
+	"github.com/VersoriumX/teleport/lib/client"
+	"github.com/VersoriumX/teleport/lib/defaults"
+	"github.com/VersoriumX/teleport/lib/httplib"
+	"github.com/VersoriumX/teleport/lib/reversetunnelclient"
+	"github.com/VersoriumX/teleport/lib/services"
+	"github.com/VersoriumX/teleport/lib/web/ui"
 )
 
 // checkAccessToRegisteredResource checks if calling user has access to at least one registered resource.
