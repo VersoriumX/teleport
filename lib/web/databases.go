@@ -29,19 +29,19 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/gravitational/trace"
-	"github.com/julienschmidt/httprouter"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/httprouter"
 
-	"github.com/gravitational/teleport/api/client/proto"
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/api/utils/tlsutils"
-	"github.com/gravitational/teleport/lib/defaults"
-	"github.com/gravitational/teleport/lib/httplib"
-	"github.com/gravitational/teleport/lib/reversetunnelclient"
-	"github.com/gravitational/teleport/lib/services"
-	dbiam "github.com/gravitational/teleport/lib/srv/db/common/iam"
-	"github.com/gravitational/teleport/lib/web/scripts"
-	"github.com/gravitational/teleport/lib/web/ui"
+	"github.com/VersoriumX/teleport/api/client/proto"
+	"github.com/VersoriumX/teleport/api/types"
+	"github.com/VersoriumX/teleport/api/utils/tlsutils"
+	"github.com/VersoriumX/teleport/lib/defaults"
+	"github.com/VersoriumX/teleport/lib/httplib"
+	"github.com/VersoriumX/teleport/lib/reversetunnelclient"
+	"github.com/VersoriumX/teleport/lib/services"
+	dbiam "github.com/VersoriumX/teleport/lib/srv/db/common/iam"
+	"github.com/VersoriumX/teleport/lib/web/scripts"
+	"github.com/VersoriumX/teleport/lib/web/ui"
 )
 
 // createDatabaseRequest contains the necessary basic information to create a database.
