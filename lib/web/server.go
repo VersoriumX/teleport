@@ -25,12 +25,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/gravitational/trace"
-	"github.com/sirupsen/logrus"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/logrus"
 
-	"github.com/gravitational/teleport"
-	"github.com/gravitational/teleport/lib/defaults"
-	"github.com/gravitational/teleport/lib/utils"
+	"github.com/VersoriumX/teleport"
+	"github.com/VersoriumX/teleport/lib/defaults"
+	"github.com/VersoriumX/teleport/lib/utils"
 )
 
 // ServerConfig provides dependencies required to create a [Server].
