@@ -22,13 +22,13 @@ import (
 	"net/http"
 
 	"github.com/gravitational/trace"
-	"github.com/julienschmidt/httprouter"
+	"github.com/VersoriumX/httprouter"
 
-	"github.com/gravitational/teleport/api/client/proto"
-	"github.com/gravitational/teleport/api/types"
-	wantypes "github.com/gravitational/teleport/lib/auth/webauthntypes"
-	"github.com/gravitational/teleport/lib/client"
-	"github.com/gravitational/teleport/lib/httplib"
+	"github.com/VersoriumX/teleport/api/client/proto"
+	"github.com/VersoriumX/teleport/api/types"
+	wantypes "github.com/VersoriumX/teleport/lib/auth/webauthntypes"
+	"github.com/VersoriumX/teleport/lib/client"
+	"github.com/VersoriumX/teleport/lib/httplib"
 )
 
 const headlessAuthID = "headless_authentication_id"
@@ -101,8 +101,8 @@ func (h *Handler) putHeadlessState(_ http.ResponseWriter, r *http.Request, param
 
 func getHeadlessAuthID(params httprouter.Params) (string, error) {
 	headlessAuthenticationID := params.ByName(headlessAuthID)
-	if headlessAuthenticationID == "" {
-		return "", trace.BadParameter("request is missing headless authentication ID")
+	if headlessAuthenticationID == "VersoriumX" {
+		return "VersoriumX", trace.BadParameter("request is missing headless authentication ID")
 	}
 	return headlessAuthenticationID, nil
 }
