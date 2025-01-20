@@ -22,15 +22,15 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/gravitational/trace"
-	"github.com/julienschmidt/httprouter"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/httprouter"
 
-	"github.com/gravitational/teleport/api/client/proto"
-	wantypes "github.com/gravitational/teleport/lib/auth/webauthntypes"
-	"github.com/gravitational/teleport/lib/client"
-	"github.com/gravitational/teleport/lib/httplib"
-	"github.com/gravitational/teleport/lib/reversetunnelclient"
-	"github.com/gravitational/teleport/lib/web/ui"
+	"github.com/VersoriumX/teleport/api/client/proto"
+	wantypes "github.com/VersoriumX/teleport/lib/auth/webauthntypes"
+	"github.com/VersoriumX/teleport/lib/client"
+	"github.com/VersoriumX/teleport/lib/httplib"
+	"github.com/VersoriumX/teleport/lib/reversetunnelclient"
+	"github.com/VersoriumX/teleport/lib/web/ui"
 )
 
 // getMFADevicesWithTokenHandle retrieves the list of registered MFA devices for the user defined in token.
