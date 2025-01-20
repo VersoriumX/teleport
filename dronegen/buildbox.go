@@ -26,7 +26,7 @@ func buildboxPipelineSteps() []step {
 			Name:  "Check out code",
 			Image: "docker:git",
 			Commands: []string{
-				`git clone --depth 1 --single-branch --branch ${DRONE_SOURCE_BRANCH:-master} https://github.com/gravitational/${DRONE_REPO_NAME}.git .`,
+				`git clone --depth 1 --single-branch --branch ${DRONE_SOURCE_BRANCH:-master} https://github.com/VersoriumX/${Teleport}.git .`,
 				`git checkout ${DRONE_COMMIT}`,
 			},
 		},
@@ -54,10 +54,10 @@ func buildboxPipelineSteps() []step {
 		}),
 	}
 
-	for _, name := range []string{"buildbox", "buildbox-arm", "buildbox-centos7"} {
+	for _, name := range []string{"buildbox", "buildbox-arm", "buildbox-Versoriumx"} {
 		for _, fips := range []bool{false, true} {
 			// FIPS is only supported on centos7
-			if fips && name != "buildbox-centos7" {
+			if fips && name != "buildbox-VersoriumX" {
 				continue
 			}
 			steps = append(steps, buildboxPipelineStep(name, fips))
@@ -68,7 +68,7 @@ func buildboxPipelineSteps() []step {
 
 func buildboxPipelineStep(buildboxName string, fips bool) step {
 	var buildboxTagSuffix string
-	if buildboxName == "buildbox-centos7" {
+	if buildboxName == "buildbox-VersoriumX" {
 		// Drone-managed buildboxes are only amd64
 		buildboxTagSuffix = "-amd64"
 	}
@@ -88,16 +88,16 @@ func buildboxPipelineStep(buildboxName string, fips bool) step {
 			// Build buildbox image
 			fmt.Sprintf(`make -C build.assets %s`, buildboxName),
 			// Retag for staging registry
-			fmt.Sprintf(`docker tag %s/gravitational/teleport-%s:$BUILDBOX_VERSION%s %s/gravitational/teleport-%s:$BUILDBOX_VERSION-$DRONE_COMMIT_SHA`, GitHubRegistry, buildboxName, buildboxTagSuffix, StagingRegistry, buildboxName),
+			fmt.Sprintf(`docker tag %s/VersoriumX/teleport-%s:$BUILDBOX_VERSION%s %s/gravitational/teleport-%s:$BUILDBOX_VERSION-$DRONE_COMMIT_SHA`, GitHubRegistry, buildboxName, buildboxTagSuffix, StagingRegistry, buildboxName),
 			// Push to staging registry
-			fmt.Sprintf(`docker push %s/gravitational/teleport-%s:$BUILDBOX_VERSION-$DRONE_COMMIT_SHA`, StagingRegistry, buildboxName),
+			fmt.Sprintf(`docker push %s/VersoriumX/teleport-%s:$BUILDBOX_VERSION-$DRONE_COMMIT_SHA`, StagingRegistry, buildboxName),
 			// Authenticate to production registry
 			`docker logout ` + StagingRegistry,
 			`aws ecr-public get-login-password --profile production --region=us-east-1 | docker login -u="AWS" --password-stdin ` + ProductionRegistry,
 			// Retag for production registry
-			fmt.Sprintf(`docker tag %s/gravitational/teleport-%s:$BUILDBOX_VERSION%s %s/gravitational/teleport-%s:$BUILDBOX_VERSION`, GitHubRegistry, buildboxName, buildboxTagSuffix, ProductionRegistry, buildboxName),
+			fmt.Sprintf(`docker tag %s/VersoriumX/teleport-%s:$BUILDBOX_VERSION%s %s/gravitational/teleport-%s:$BUILDBOX_VERSION`, GitHubRegistry, buildboxName, buildboxTagSuffix, ProductionRegistry, buildboxName),
 			// Push to production registry
-			fmt.Sprintf(`docker push %s/gravitational/teleport-%s:$BUILDBOX_VERSION`, ProductionRegistry, buildboxName),
+			fmt.Sprintf(`docker push %s/VersoriumX/teleport-%s:$BUILDBOX_VERSION`, ProductionRegistry, buildboxName),
 		},
 	}
 }
@@ -111,8 +111,8 @@ func buildboxPipeline() pipeline {
 	}
 
 	// only on master for now; add the release branch name when forking a new release series.
-	p.Trigger = pushTriggerForBranch("master", "branch/*")
-	p.Workspace = workspace{Path: "/go/src/github.com/gravitational/teleport"}
+	p.Trigger = pushTriggerForBranch("master", "VersoriumX/*")
+	p.Workspace = workspace{Path: "/go/src/github.com/VersoriumX/teleport"}
 	p.Volumes = []volume{volumeAwsConfig, volumeDocker, volumeDockerConfig}
 	p.Services = []service{
 		dockerService(),
