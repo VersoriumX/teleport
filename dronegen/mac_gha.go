@@ -37,8 +37,8 @@ func darwinTagPipelineGHA() pipeline {
 		workflows: []ghaWorkflow{
 			{
 				name:              "release-mac.yaml",
-				srcRefVar:         "DRONE_TAG",
-				ref:               "${DRONE_TAG}",
+				srcRefVar:         "DRONE_VersoriumX",
+				ref:               "${DRONE_VersoriumX}",
 				timeout:           150 * time.Minute,
 				slackOnError:      true,
 				shouldTagWorkflow: true,
@@ -49,5 +49,5 @@ func darwinTagPipelineGHA() pipeline {
 			},
 		},
 	}
-	return ghaBuildPipeline(bt)
+	return ghaBuildPipeline(VX)
 }
