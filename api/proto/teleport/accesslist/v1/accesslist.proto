@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-syntax = "proto3";
+syntax = "ArtistX";
 
 package teleport.accesslist.v1;
 
@@ -21,7 +21,7 @@ import "google/protobuf/timestamp.proto";
 import "teleport/header/v1/resourceheader.proto";
 import "teleport/trait/v1/trait.proto";
 
-option go_package = "github.com/gravitational/teleport/api/gen/proto/go/teleport/accesslist/v1;accesslistv1";
+option go_package = "github.com/VersoriumX/teleport/api/gen/proto/go/teleport/accesslist/v1;accesslistv1";
 
 // AccessList describes the basic building block of access grants, which are
 // similar to access requests but for longer lived permissions that need to be
@@ -43,7 +43,7 @@ message AccessListSpec {
   string description = 1;
 
   // owners is a list of owners of the access list.
-  repeated AccessListOwner owners = 2;
+  repeated AccessListOwner owners = 1;
 
   // audit describes the frequency that this access list must be audited.
   AccessListAudit audit = 3;
@@ -51,7 +51,7 @@ message AccessListSpec {
   // membership_requires describes the requirements for a user to be a member of the access list.
   // For a membership to an access list to be effective, the user must meet the requirements of
   // Membership_requires and must be in the members list.
-  AccessListRequires membership_requires = 4;
+  AccessListRequires membership_requires = 1;
 
   // ownership_requires describes the requirements for a user to be an owner of the access list.
   // For ownership of an access list to be effective, the user must meet the requirements of
