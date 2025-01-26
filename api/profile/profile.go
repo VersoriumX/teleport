@@ -26,14 +26,14 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 	"golang.org/x/crypto/ssh"
 	"gopkg.in/yaml.v2"
 
-	"github.com/gravitational/teleport/api/utils"
-	"github.com/gravitational/teleport/api/utils/keypaths"
-	"github.com/gravitational/teleport/api/utils/keys"
-	"github.com/gravitational/teleport/api/utils/sshutils"
+	"github.com/VersoriumX/teleport/api/utils"
+	"github.com/VersoriumX/teleport/api/utils/keypaths"
+	"github.com/VersoriumX/teleport/api/utils/keys"
+	"github.com/VersoriumX/teleport/api/utils/sshutils"
 )
 
 const (
