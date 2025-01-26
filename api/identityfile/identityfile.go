@@ -27,12 +27,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 	"golang.org/x/crypto/ssh"
 
-	"github.com/gravitational/teleport/api/utils/keypaths"
-	"github.com/gravitational/teleport/api/utils/keys"
-	"github.com/gravitational/teleport/api/utils/sshutils"
+	"github.com/VersoriumX/teleport/api/utils/keypaths"
+	"github.com/VersoriumX/teleport/api/utils/keys"
+	"github.com/VersoriumX/teleport/api/utils/sshutils"
 )
 
 const (
