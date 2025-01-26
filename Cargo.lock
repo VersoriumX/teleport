@@ -253,7 +253,7 @@ version = "0.66.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f2b84e06fc203107bfbad243f4aba2af864eb7db3b1cf46ea0a023b0b433d2a7"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "cexpr",
  "clang-sys",
  "lazy_static",
@@ -281,9 +281,9 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
 name = "bitflags"
-version = "2.7.0"
+version = "2.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1be3f42a67d6d345ecd59f675f3f012d6974981560836e938c22b424b85ce1be"
+checksum = "8f68f53c83ab957f72c32642f3868eec03eb974d1fb82e453128456482613d36"
 
 [[package]]
 name = "bitvec"
@@ -321,7 +321,7 @@ version = "3.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ae1aba472e42d3cf45ac6d0a6c8fc3ddf743871209e1b40229aed9fbdf48ece"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "boring-sys",
  "foreign-types",
  "libc",
@@ -369,9 +369,9 @@ dependencies = [
 
 [[package]]
 name = "cbindgen"
-version = "0.27.0"
+version = "0.28.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3fce8dd7fcfcbf3a0a87d8f515194b49d6135acab73e18bd380d1d93bb1a15eb"
+checksum = "eadd868a2ce9ca38de7eeafdcec9c7065ef89b42b32f0839278d55f35c54d1ff"
 dependencies = [
  "clap",
  "heck",
@@ -802,9 +802,9 @@ dependencies = [
 
 [[package]]
 name = "env_logger"
-version = "0.11.2"
+version = "0.11.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c012a26a7f605efc424dd53697843a72be7dc86ad2d01f7814337794a12231d"
+checksum = "dcaee3d8e3cfc3fd92428d477bc97fc29ec8716d180c0d74c643bb26166660e0"
 dependencies = [
  "anstream",
  "anstyle",
@@ -1309,7 +1309,7 @@ name = "ironrdp-cliprdr"
 version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "ironrdp-pdu",
  "ironrdp-svc",
  "thiserror",
@@ -1342,7 +1342,7 @@ version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
  "bit_field",
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "bitvec",
  "byteorder",
  "ironrdp-error",
@@ -1359,7 +1359,7 @@ version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
  "bit_field",
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "byteorder",
  "der-parser 8.2.0",
  "ironrdp-error",
@@ -1380,7 +1380,7 @@ name = "ironrdp-rdpdr"
 version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "ironrdp-error",
  "ironrdp-pdu",
  "ironrdp-svc",
@@ -1401,7 +1401,7 @@ name = "ironrdp-session"
 version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "ironrdp-connector",
  "ironrdp-error",
  "ironrdp-graphics",
@@ -1415,7 +1415,7 @@ name = "ironrdp-svc"
 version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "ironrdp-pdu",
 ]
 
@@ -1544,9 +1544,9 @@ dependencies = [
 
 [[package]]
 name = "log"
-version = "0.4.22"
+version = "0.4.25"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a7a70ba024b9dc04c27ea2f0c0548feb474ec5c54bba33a7f72f873a39d07b24"
+checksum = "04cbf5b083de1c7e0222a7a51dbfdba1cbe1c6ab0b15e29fff3f6c077fd9cd9f"
 
 [[package]]
 name = "md-5"
@@ -2100,7 +2100,7 @@ dependencies = [
 name = "rdp-client"
 version = "0.1.0"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "boring",
  "byteorder",
  "bytes",
@@ -2304,7 +2304,7 @@ version = "0.38.43"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a78891ee6bf2340288408954ac787aa063d8e8817e9f53abb37c695c6d834ef6"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "errno",
  "libc",
  "linux-raw-sys",
@@ -2628,7 +2628,7 @@ source = "git+https://github.com/Devolutions/sspi-rs?rev=d54bdfcafa0e10d9d78224e
 dependencies = [
  "async-dnssd",
  "async-recursion",
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "byteorder",
  "cfg-if",
  "crypto-mac",
@@ -2673,7 +2673,7 @@ checksum = "bf9e7d03e3a0314c94b37625112eeaba08068b0ffbb181deefd4c7deae5ba046"
 dependencies = [
  "async-dnssd",
  "async-recursion",
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "byteorder",
  "cfg-if",
  "crypto-mac",
@@ -3164,9 +3164,9 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 
 [[package]]
 name = "uuid"
-version = "1.11.1"
+version = "1.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b913a3b5fe84142e269d63cc62b64319ccaf89b748fc31fe025177f767a756c4"
+checksum = "b3758f5e68192bb96cc8f9b7e2c2cfdabb435499a28499a42f8f984092adad4b"
 dependencies = [
  "getrandom",
  "serde",
