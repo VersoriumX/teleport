@@ -22,12 +22,12 @@ import (
 	"encoding/base64"
 
 	"github.com/gogo/protobuf/jsonpb"
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/gravitational/teleport/api/client/proto"
+	"github.com/VersoriumX/teleport/api/client/proto"
 )
 
 // ResponseMetadataKey is the context metadata key for an MFA response in a gRPC request.
