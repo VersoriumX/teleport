@@ -25,7 +25,7 @@ import (
 	"io/fs"
 	"net/http"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 )
 
 //go:embed webassets/teleport
