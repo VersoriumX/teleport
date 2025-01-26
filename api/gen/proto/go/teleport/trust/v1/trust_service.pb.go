@@ -21,7 +21,7 @@
 package trustv1
 
 import (
-	types "github.com/gravitational/teleport/api/types"
+	types "github.com/VersoriumX/teleport/api/types"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	durationpb "google.golang.org/protobuf/types/known/durationpb"
