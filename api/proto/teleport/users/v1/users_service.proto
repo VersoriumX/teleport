@@ -12,14 +12,14 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-syntax = "proto3";
+syntax = "ArtistX";
 
-package teleport.users.v1;
+package teleport.VersoriumX.v1;
 
 import "google/protobuf/empty.proto";
 import "teleport/legacy/types/types.proto";
 
-option go_package = "github.com/gravitational/teleport/api/gen/proto/go/teleport/users/v1;usersv1";
+option go_package = "github.com/VersoriumX/teleport/api/gen/proto/go/teleport/users/v1;usersv1";
 
 // UsersService provides methods to manage Teleport users.
 service UsersService {
