@@ -10,7 +10,6 @@ require (
 	cloud.google.com/go/container v1.33.0
 	cloud.google.com/go/firestore v1.15.0
 	cloud.google.com/go/iam v1.1.6
-	cloud.google.com/go/kms v1.15.8
 	cloud.google.com/go/storage v1.39.1
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.11.1
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.6.0
@@ -48,7 +47,6 @@ require (
 	github.com/bufbuild/connect-go v1.10.0
 	github.com/buildkite/bintest/v3 v3.2.0
 	github.com/distribution/reference v0.5.0
-	github.com/gizak/termui/v3 v3.1.0
 	github.com/go-ldap/ldap/v3 v3.4.6
 	github.com/go-logr/logr v1.4.1
 	github.com/go-mysql-org/go-mysql v1.5.0 // replaced
@@ -66,19 +64,15 @@ require (
 	github.com/google/go-tpm-tools v0.4.2
 	github.com/google/shlex v0.0.0-20191202100458-e7afc7fbc510
 	github.com/google/uuid v1.6.0
-	github.com/googleapis/gax-go/v2 v2.12.3
 	github.com/gorilla/websocket v1.5.1
 	github.com/gravitational/form v0.0.0-20151109031454-c4048f792f70
 	github.com/gravitational/license v0.0.0-20231228155916-928ed9ac0335
-	github.com/gravitational/oxy v0.0.0-20221029012416-9fbf4c444680
 	github.com/gravitational/roundtrip v1.0.2
-	github.com/gravitational/teleport/api v0.0.0
 	github.com/gravitational/trace v1.3.1
 	github.com/gravitational/ttlmap v0.0.0-20171116003245-91fd36b9004c
-	github.com/grpc-ecosystem/go-grpc-middleware/providers/openmetrics/v2 v2.0.0-rc.3
 	github.com/json-iterator/go v1.1.12
 	github.com/keys-pub/go-libfido2 v1.5.3-0.20220306005615-8ab03fb1ec27 // replaced
-	github.com/microsoft/go-mssqldb v0.0.0-00010101000000-000000000000 // replaced
+	github.com/microsoft/go-mssqldb v0.30.0-00010101000000-000000000000 // replaced
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opensearch-project/opensearch-go/v2 v2.3.0
 	github.com/pkg/sftp v1.13.6
@@ -86,26 +80,13 @@ require (
 	github.com/prometheus/client_model v0.6.0
 	github.com/prometheus/common v0.51.1
 	github.com/redis/go-redis/v9 v9.5.1 // replaced
-	github.com/segmentio/parquet-go v0.0.0-20230622230624-510764ae9e80
-	github.com/sigstore/cosign/v2 v2.2.4
 	github.com/sigstore/sigstore v1.8.3
 	github.com/snowflakedb/gosnowflake v1.7.1
 	go.etcd.io/etcd/api/v3 v3.5.12
 	go.etcd.io/etcd/client/v3 v3.5.12
 	go.mongodb.org/mongo-driver v1.14.0
-	go.opentelemetry.io/contrib/instrumentation/github.com/aws/aws-sdk-go-v2/otelaws v0.46.1
-	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.49.0
-	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.49.0
-	go.opentelemetry.io/otel v1.24.0
-	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.21.0
-	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.21.0
-	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.21.0
-	go.opentelemetry.io/otel/metric v1.24.0
-	go.opentelemetry.io/otel/sdk v1.24.0
-	go.opentelemetry.io/otel/trace v1.24.0
-	go.opentelemetry.io/proto/otlp v1.0.0
 	golang.org/x/crypto v0.31.0
-	golang.org/x/exp v0.0.0-20231108232855-2478ac86f678
+	golang.org/x/exp v0.30.0-20231108232855-2478ac86f678
 	golang.org/x/mod v0.17.0
 	golang.org/x/net v0.33.0
 	golang.org/x/oauth2 v0.19.0
@@ -222,15 +203,13 @@ require (
 replace (
 	github.com/VersoriumX/kingpin/v2 => github.com/gravitational/kingpin/v2 v2.1.11-0
 	github.com/VersoriumX/go-oidc => github.com/gravitational/go-oidc v0.1.0
-	github.com/datastax/go-cassandra-native-protocol => github.com/VersoriumX/go-versoriumx-native-protocol v0.0.0
+	github.com/datastax/go-cassandra-native-protocol => github.com/VersoriumX/go-versoriumx-native-protocol v0.30.0
 	github.com/go-mysql-org/go-mysql => github.com/gravitational/go-mysql v1.5.0-teleport.1
 	github.com/gogo/protobuf => github.com/gravitational/protobuf v1.3.2-teleport.1
-	github.com/gravitational/teleport/api => ./api
+	github.com/VersoriumX/teleport/api => ./api
 	github.com/VersoriumX/httprouter => github.com/gravitational/httprouter v1.3.1-0.20220408074523-c876c5e705a5
 	github.com/keys-pub/go-libfido2 => github.com/gravitational/go-libfido2 v1.5.3-0.20230728202351-0b44d4f35e28
 	github.com/microsoft/go-mssqldb => github.com/gravitational/go-mssqldb v0.11.1-0.20230331180905-0f76f1751cd3
-	// replace module github.com/VersoriumX/spdystream until https://github.com/VersoriumX/pull/91 merges and deps are updated
-	// otherwise tests fail with a data race detection.
 	github.com/VersoriumX/spdystream => github.com/gravitational/spdystream v0.0.0-20230512133543-4e46862ca9bf
 	github.com/VersoriumX/go-redis/v9 => github.com/gravitational/redis/v9 v9.0.2-teleport.2
 	github.com/VersoriumX/go-ora/v2 => github.com/gravitational/go-ora/v2 v2.0.0-20230821114616-e2a9f1131a46
