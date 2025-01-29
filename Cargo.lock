@@ -104,22 +104,22 @@ dependencies = [
  "nom",
  "num-traits",
  "rusticata-macros",
- "thiserror",
+ "thiserror 1.0.50",
 ]
 
 [[package]]
 name = "asn1-rs"
-version = "0.6.2"
+version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5493c3bedbacf7fd7382c6346bbd66687d12bbaad3a89a2d2c303ee6cf20b048"
+checksum = "607495ec7113b178fbba7a6166a27f99e774359ef4823adbefd756b5b81d7970"
 dependencies = [
- "asn1-rs-derive 0.5.1",
+ "asn1-rs-derive 0.6.0",
  "asn1-rs-impl 0.2.0",
  "displaydoc",
  "nom",
  "num-traits",
  "rusticata-macros",
- "thiserror",
+ "thiserror 2.0.11",
  "time",
 ]
 
@@ -137,9 +137,9 @@ dependencies = [
 
 [[package]]
 name = "asn1-rs-derive"
-version = "0.5.1"
+version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "965c2d33e53cb6b267e148a4cb0760bc01f4904c1cd4bb4002a085bb016d1490"
+checksum = "3109e49b1e4909e9db6515a30c633684d68cdeaa252f215214cb4fa1a5bfee2c"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -253,7 +253,7 @@ version = "0.66.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f2b84e06fc203107bfbad243f4aba2af864eb7db3b1cf46ea0a023b0b433d2a7"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "cexpr",
  "clang-sys",
  "lazy_static",
@@ -281,9 +281,9 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
 name = "bitflags"
-version = "2.7.0"
+version = "2.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1be3f42a67d6d345ecd59f675f3f012d6974981560836e938c22b424b85ce1be"
+checksum = "8f68f53c83ab957f72c32642f3868eec03eb974d1fb82e453128456482613d36"
 
 [[package]]
 name = "bitvec"
@@ -321,7 +321,7 @@ version = "3.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ae1aba472e42d3cf45ac6d0a6c8fc3ddf743871209e1b40229aed9fbdf48ece"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "boring-sys",
  "foreign-types",
  "libc",
@@ -369,9 +369,9 @@ dependencies = [
 
 [[package]]
 name = "cbindgen"
-version = "0.27.0"
+version = "0.28.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3fce8dd7fcfcbf3a0a87d8f515194b49d6135acab73e18bd380d1d93bb1a15eb"
+checksum = "eadd868a2ce9ca38de7eeafdcec9c7065ef89b42b32f0839278d55f35c54d1ff"
 dependencies = [
  "clap",
  "heck",
@@ -561,7 +561,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0dc92fb57ca44df6db8059111ab3af99a63d5d0f8375d9972e319a379c6bab76"
 dependencies = [
  "generic-array",
- "rand_core",
+ "rand_core 0.6.4",
  "subtle",
  "zeroize",
 ]
@@ -657,11 +657,11 @@ dependencies = [
 
 [[package]]
 name = "der-parser"
-version = "9.0.0"
+version = "10.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5cd0a5c643689626bec213c4d8bd4d96acc8ffdb4ad4bb6bc16abf27d5f4b553"
+checksum = "07da5016415d5a3c4dd39b11ed26f915f52fc4e0dc197d87908bc916e51bc1a6"
 dependencies = [
- "asn1-rs 0.6.2",
+ "asn1-rs 0.7.0",
  "displaydoc",
  "nom",
  "num-bigint",
@@ -753,7 +753,7 @@ checksum = "1f628eaec48bfd21b865dc2950cfa014450c01d2fa2b69a86c2fd5844ec523c0"
 dependencies = [
  "curve25519-dalek",
  "ed25519",
- "rand_core",
+ "rand_core 0.6.4",
  "serde",
  "sha2",
  "subtle",
@@ -775,7 +775,7 @@ dependencies = [
  "hkdf",
  "pem-rfc7468",
  "pkcs8",
- "rand_core",
+ "rand_core 0.6.4",
  "sec1",
  "subtle",
  "zeroize",
@@ -802,9 +802,9 @@ dependencies = [
 
 [[package]]
 name = "env_logger"
-version = "0.11.2"
+version = "0.11.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "6c012a26a7f605efc424dd53697843a72be7dc86ad2d01f7814337794a12231d"
+checksum = "dcaee3d8e3cfc3fd92428d477bc97fc29ec8716d180c0d74c643bb26166660e0"
 dependencies = [
  "anstream",
  "anstyle",
@@ -850,7 +850,7 @@ version = "0.13.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ded41244b729663b1e574f1b4fb731469f69f79c17667b5d776b16cda0479449"
 dependencies = [
- "rand_core",
+ "rand_core 0.6.4",
  "subtle",
 ]
 
@@ -1049,8 +1049,20 @@ dependencies = [
  "cfg-if",
  "js-sys",
  "libc",
- "wasi",
+ "wasi 0.11.0+wasi-snapshot-preview1",
  "wasm-bindgen",
+]
+
+[[package]]
+name = "getrandom"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "43a49c392881ce6d5c3b8cb70f98717b7c07aabbdff06687b9030dbfbe2725f8"
+dependencies = [
+ "cfg-if",
+ "libc",
+ "wasi 0.13.3+wasi-0.2.2",
+ "windows-targets 0.52.6",
 ]
 
 [[package]]
@@ -1072,7 +1084,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f0f9ef7462f7c099f518d754361858f86d8a07af53ba9af0fe635bbccb151a63"
 dependencies = [
  "ff",
- "rand_core",
+ "rand_core 0.6.4",
  "subtle",
 ]
 
@@ -1278,7 +1290,7 @@ dependencies = [
  "bytes",
  "console_error_panic_hook",
  "console_log",
- "getrandom",
+ "getrandom 0.2.15",
  "ironrdp-graphics",
  "ironrdp-pdu",
  "ironrdp-session",
@@ -1309,10 +1321,10 @@ name = "ironrdp-cliprdr"
 version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "ironrdp-pdu",
  "ironrdp-svc",
- "thiserror",
+ "thiserror 1.0.50",
  "tracing",
 ]
 
@@ -1324,7 +1336,7 @@ dependencies = [
  "ironrdp-error",
  "ironrdp-pdu",
  "ironrdp-svc",
- "rand_core",
+ "rand_core 0.6.4",
  "sspi 0.11.0",
  "tracing",
  "url",
@@ -1342,7 +1354,7 @@ version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
  "bit_field",
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "bitvec",
  "byteorder",
  "ironrdp-error",
@@ -1350,7 +1362,7 @@ dependencies = [
  "lazy_static",
  "num-derive",
  "num-traits",
- "thiserror",
+ "thiserror 1.0.50",
 ]
 
 [[package]]
@@ -1359,7 +1371,7 @@ version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
  "bit_field",
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "byteorder",
  "der-parser 8.2.0",
  "ironrdp-error",
@@ -1371,7 +1383,7 @@ dependencies = [
  "pkcs1",
  "sha1",
  "tap",
- "thiserror",
+ "thiserror 1.0.50",
  "x509-cert",
 ]
 
@@ -1380,7 +1392,7 @@ name = "ironrdp-rdpdr"
 version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "ironrdp-error",
  "ironrdp-pdu",
  "ironrdp-svc",
@@ -1401,7 +1413,7 @@ name = "ironrdp-session"
 version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "ironrdp-connector",
  "ironrdp-error",
  "ironrdp-graphics",
@@ -1415,7 +1427,7 @@ name = "ironrdp-svc"
 version = "0.1.0"
 source = "git+https://github.com/Devolutions/IronRDP?rev=d24000a2aeab74f2610a0b01c629f7a4ef3c77ef#d24000a2aeab74f2610a0b01c629f7a4ef3c77ef"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "ironrdp-pdu",
 ]
 
@@ -1544,9 +1556,9 @@ dependencies = [
 
 [[package]]
 name = "log"
-version = "0.4.22"
+version = "0.4.25"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a7a70ba024b9dc04c27ea2f0c0548feb474ec5c54bba33a7f72f873a39d07b24"
+checksum = "04cbf5b083de1c7e0222a7a51dbfdba1cbe1c6ab0b15e29fff3f6c077fd9cd9f"
 
 [[package]]
 name = "md-5"
@@ -1611,7 +1623,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2886843bf800fba2e3377cff24abf6379b4c4d5c6681eaf9ea5b0d15090450bd"
 dependencies = [
  "libc",
- "wasi",
+ "wasi 0.11.0+wasi-snapshot-preview1",
  "windows-sys 0.52.0",
 ]
 
@@ -1732,11 +1744,11 @@ dependencies = [
 
 [[package]]
 name = "oid-registry"
-version = "0.7.1"
+version = "0.8.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a8d8034d9489cdaf79228eb9f6a3b8d7bb32ba00d6645ebd48eef4077ceb5bd9"
+checksum = "264c56d1492c13e769662197fb6b94e0a52abe52d27efac374615799a4bf453d"
 dependencies = [
- "asn1-rs 0.6.2",
+ "asn1-rs 0.7.0",
 ]
 
 [[package]]
@@ -1878,13 +1890,13 @@ dependencies = [
  "picky-asn1-der",
  "picky-asn1-x509",
  "rand",
- "rand_core",
+ "rand_core 0.6.4",
  "rsa",
  "serde",
  "sha1",
  "sha2",
  "sha3",
- "thiserror",
+ "thiserror 1.0.50",
  "x25519-dalek",
  "zeroize",
 ]
@@ -1950,7 +1962,7 @@ dependencies = [
  "rand",
  "serde",
  "sha1",
- "thiserror",
+ "thiserror 1.0.50",
  "uuid",
 ]
 
@@ -2073,8 +2085,8 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "34af8d1a0e25924bc5b7c43c079c942339d8f0a8b57c39049bef581b46327404"
 dependencies = [
  "libc",
- "rand_chacha",
- "rand_core",
+ "rand_chacha 0.3.1",
+ "rand_core 0.6.4",
 ]
 
 [[package]]
@@ -2084,7 +2096,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6c10a63a0fa32252be49d21e7709d4d4baf8d231c2dbce1eaa8141b9b127d88"
 dependencies = [
  "ppv-lite86",
- "rand_core",
+ "rand_core 0.6.4",
+]
+
+[[package]]
+name = "rand_chacha"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d3022b5f1df60f26e1ffddd6c66e8aa15de382ae63b3a0c1bfc0e4d3e3f325cb"
+dependencies = [
+ "ppv-lite86",
+ "rand_core 0.9.0",
 ]
 
 [[package]]
@@ -2093,14 +2115,24 @@ version = "0.6.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ec0be4795e2f6a28069bec0b5ff3e2ac9bafc99e6a9a7dc3547996c5c816922c"
 dependencies = [
- "getrandom",
+ "getrandom 0.2.15",
+]
+
+[[package]]
+name = "rand_core"
+version = "0.9.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "b08f3c9802962f7e1b25113931d94f43ed9725bebc59db9d0c3e9a23b67e15ff"
+dependencies = [
+ "getrandom 0.3.1",
+ "zerocopy",
 ]
 
 [[package]]
 name = "rdp-client"
 version = "0.1.0"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "boring",
  "byteorder",
  "bytes",
@@ -2124,7 +2156,7 @@ dependencies = [
  "parking_lot 0.12.3",
  "png",
  "rand",
- "rand_chacha",
+ "rand_chacha 0.9.0",
  "rsa",
  "sspi 0.10.1",
  "static_init",
@@ -2241,7 +2273,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "684d5e6e18f669ccebf64a92236bb7db9a34f07be010e3627368182027180866"
 dependencies = [
  "cc",
- "getrandom",
+ "getrandom 0.2.15",
  "libc",
  "spin 0.9.8",
  "untrusted",
@@ -2261,7 +2293,7 @@ dependencies = [
  "num-traits",
  "pkcs1",
  "pkcs8",
- "rand_core",
+ "rand_core 0.6.4",
  "signature",
  "spki",
  "subtle",
@@ -2304,7 +2336,7 @@ version = "0.38.43"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a78891ee6bf2340288408954ac787aa063d8e8817e9f53abb37c695c6d834ef6"
 dependencies = [
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "errno",
  "libc",
  "linux-raw-sys",
@@ -2552,7 +2584,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "77549399552de45a898a580c1b41d445bf730df867cc44e6c0233bbc4b8329de"
 dependencies = [
  "digest",
- "rand_core",
+ "rand_core 0.6.4",
 ]
 
 [[package]]
@@ -2628,7 +2660,7 @@ source = "git+https://github.com/Devolutions/sspi-rs?rev=d54bdfcafa0e10d9d78224e
 dependencies = [
  "async-dnssd",
  "async-recursion",
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "byteorder",
  "cfg-if",
  "crypto-mac",
@@ -2673,7 +2705,7 @@ checksum = "bf9e7d03e3a0314c94b37625112eeaba08068b0ffbb181deefd4c7deae5ba046"
 dependencies = [
  "async-dnssd",
  "async-recursion",
- "bitflags 2.7.0",
+ "bitflags 2.8.0",
  "byteorder",
  "cfg-if",
  "crypto-mac",
@@ -2844,7 +2876,16 @@ version = "1.0.50"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "f9a7210f5c9a7156bb50aa36aed4c95afb51df0df00713949448cf9e97d382d2"
 dependencies = [
- "thiserror-impl",
+ "thiserror-impl 1.0.50",
+]
+
+[[package]]
+name = "thiserror"
+version = "2.0.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d452f284b73e6d76dd36758a0c8684b1d5be31f92b89d07fd5822175732206fc"
+dependencies = [
+ "thiserror-impl 2.0.11",
 ]
 
 [[package]]
@@ -2852,6 +2893,17 @@ name = "thiserror-impl"
 version = "1.0.50"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "266b2e40bc00e5a6c09c3584011e08b06f123c00362c92b975ba9843aaaa14b8"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.96",
+]
+
+[[package]]
+name = "thiserror-impl"
+version = "2.0.11"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "26afc1baea8a989337eeb52b6e72a039780ce45c3edfcc9c5b9d112feeb173c2"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3164,11 +3216,11 @@ checksum = "06abde3611657adf66d383f00b093d7faecc7fa57071cce2578660c9f1010821"
 
 [[package]]
 name = "uuid"
-version = "1.11.1"
+version = "1.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b913a3b5fe84142e269d63cc62b64319ccaf89b748fc31fe025177f767a756c4"
+checksum = "b3758f5e68192bb96cc8f9b7e2c2cfdabb435499a28499a42f8f984092adad4b"
 dependencies = [
- "getrandom",
+ "getrandom 0.2.15",
  "serde",
 ]
 
@@ -3198,6 +3250,15 @@ name = "wasi"
 version = "0.11.0+wasi-snapshot-preview1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9c8d87e72b64a3b4db28d11ce29237c246188f4f51057d65a7eab63b7987e423"
+
+[[package]]
+name = "wasi"
+version = "0.13.3+wasi-0.2.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "26816d2e1a4a36a2940b96c5296ce403917633dff8f3440e9b236ed6f6bacad2"
+dependencies = [
+ "wit-bindgen-rt",
+]
 
 [[package]]
 name = "wasm-bindgen"
@@ -3517,6 +3578,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "wit-bindgen-rt"
+version = "0.33.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3268f3d866458b787f390cf61f4bbb563b922d091359f9608842999eaee3943c"
+dependencies = [
+ "bitflags 2.8.0",
+]
+
+[[package]]
 name = "wyz"
 version = "0.5.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3532,7 +3602,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fb66477291e7e8d2b0ff1bcb900bf29489a9692816d79874bea351e7a8b6de96"
 dependencies = [
  "curve25519-dalek",
- "rand_core",
+ "rand_core 0.6.4",
  "serde",
  "zeroize",
 ]
@@ -3550,19 +3620,39 @@ dependencies = [
 
 [[package]]
 name = "x509-parser"
-version = "0.16.0"
+version = "0.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fcbc162f30700d6f3f82a24bf7cc62ffe7caea42c0b2cba8bf7f3ae50cf51f69"
+checksum = "4569f339c0c402346d4a75a9e39cf8dad310e287eef1ff56d4c68e5067f53460"
 dependencies = [
- "asn1-rs 0.6.2",
+ "asn1-rs 0.7.0",
  "data-encoding",
- "der-parser 9.0.0",
+ "der-parser 10.0.0",
  "lazy_static",
  "nom",
  "oid-registry",
  "rusticata-macros",
- "thiserror",
+ "thiserror 2.0.11",
  "time",
+]
+
+[[package]]
+name = "zerocopy"
+version = "0.8.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a367f292d93d4eab890745e75a778da40909cab4d6ff8173693812f79c4a2468"
+dependencies = [
+ "zerocopy-derive",
+]
+
+[[package]]
+name = "zerocopy-derive"
+version = "0.8.14"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d3931cb58c62c13adec22e38686b559c86a30565e16ad6e8510a337cedc611e1"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.96",
 ]
 
 [[package]]
