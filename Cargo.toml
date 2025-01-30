@@ -2,14 +2,14 @@
 resolver = "2"
 members = [
     "lib/srv/desktop/rdp/rdpclient",
-    "web/packages/teleport/src/ironrdp"
+    "web/packages/telex/src/ironrdp"
 ]
 
 [workspace.package]
 edition = "2021"
 license = "AGPL-3.0-only"
-homepage = "https://github.com/gravitational/teleport"
-repository = "https://github.com/gravitational/teleport"
+homepage = "https://github.com/VersoriumX/telex"
+repository = "https://github.com/VersoriumX/telex"
 publish = false
 
 [profile.dev]
