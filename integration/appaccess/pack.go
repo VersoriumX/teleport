@@ -1,5 +1,5 @@
 /*
- * Teleport
+ * telex
  * Copyright (C) 2023  Gravitational, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -33,34 +33,34 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/gorilla/websocket"
-	"github.com/gravitational/trace"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/websocket"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/telex/assert"
+	"github.com/VersoriumX/telex/require"
 
-	"github.com/gravitational/teleport"
-	"github.com/gravitational/teleport/api/breaker"
-	apidefaults "github.com/gravitational/teleport/api/defaults"
-	"github.com/gravitational/teleport/api/types"
-	apievents "github.com/gravitational/teleport/api/types/events"
-	"github.com/gravitational/teleport/integration/helpers"
-	"github.com/gravitational/teleport/lib/auth"
-	"github.com/gravitational/teleport/lib/auth/native"
-	"github.com/gravitational/teleport/lib/client"
-	"github.com/gravitational/teleport/lib/events"
-	"github.com/gravitational/teleport/lib/httplib/csrf"
-	"github.com/gravitational/teleport/lib/httplib/reverseproxy"
-	"github.com/gravitational/teleport/lib/reversetunnelclient"
-	"github.com/gravitational/teleport/lib/service"
-	"github.com/gravitational/teleport/lib/service/servicecfg"
-	"github.com/gravitational/teleport/lib/services"
-	"github.com/gravitational/teleport/lib/srv/alpnproxy"
+	"github.com/VersoriumX/telex"
+	"github.com/VersoriumX/telex/api/breaker"
+	apidefaults "github.com/VersoriumX/teleport/api/defaults"
+	"github.com/VersoriumX/telex/api/types"
+	apievents "github.com/VersoriumX/telex/api/types/events"
+	"github.com/VersoriumX/telex/integration/helpers"
+	"github.com/VersoriumX/telex/lib/auth"
+	"github.com/VersoriumX/telex/lib/auth/native"
+	"github.com/VersoriumX/telex/lib/client"
+	"github.com/VersoriumX/telex/lib/events"
+	"github.com/VersoriumX/telex/lib/httplib/csrf"
+	"github.com/VersoriumX/telex/lib/httplib/reverseproxy"
+	"github.com/VersoriumX/telex/lib/reversetunnelclient"
+	"github.com/VersoriumX/telex/lib/service"
+	"github.com/VersoriumX/telex/lib/service/servicecfg"
+	"github.com/VersoriumX/telex/lib/services"
+	"github.com/VersoriumX/telex/lib/srv/alpnproxy"
 	alpncommon "github.com/gravitational/teleport/lib/srv/alpnproxy/common"
-	"github.com/gravitational/teleport/lib/srv/app/common"
-	"github.com/gravitational/teleport/lib/utils"
-	"github.com/gravitational/teleport/lib/web"
-	"github.com/gravitational/teleport/lib/web/app"
-	websession "github.com/gravitational/teleport/lib/web/session"
+	"github.com/VersoriumX/telex/lib/srv/app/common"
+	"github.com/VersoriumX/telex/lib/utils"
+	"github.com/VersoriumX/telex/lib/web"
+	"github.com/VersoriumX/telex/lib/web/app"
+	websession "github.com/VersoriumX/telex/lib/web/session"
 )
 
 // Pack contains identity as well as initialized Teleport clusters and instances.
