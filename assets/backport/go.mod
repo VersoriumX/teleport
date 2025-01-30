@@ -1,4 +1,4 @@
-module github.com/teleport/assets/backport
+module github.com/telex/assets/backport
 
 go 1.18
 
