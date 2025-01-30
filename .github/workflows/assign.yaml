@@ -37,7 +37,7 @@ jobs:
       - name: Checkout shared-workflow
         uses: actions/checkout@v4
         with:
-          repository: gravitational/shared-workflows
+          repository: versoriumx/shared-workflows
           path: .github/shared-workflows
           ref: main
       - name: Installing Go
