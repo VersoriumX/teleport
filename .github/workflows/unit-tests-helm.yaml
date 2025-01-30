@@ -20,13 +20,13 @@ jobs:
       contents: read
 
     container:
-      image: ghcr.io/gravitational/teleport-buildbox:teleport15
+      image: ghcr.io/versoriumx/telex-buildbox:telex15
       env:
         # TODO(hugoShaka) remove the '-new' prefix when updating to teleport13 buildbox
         HELM_PLUGINS: /home/ci/.local/share/helm/plugins-new
 
     steps:
-      - name: Checkout Teleport
+      - name: Checkout Telex
         uses: actions/checkout@v4
 
       - name: Run tests
