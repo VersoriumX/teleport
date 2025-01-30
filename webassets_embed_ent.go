@@ -1,8 +1,8 @@
 //go:build webassets_embed && webassets_ent
 
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * telex
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package teleport
+package telex
 
 import (
 	"embed"
@@ -34,7 +34,7 @@ var embedded embed.FS
 // NewWebAssetsFilesystem returns the initialized implementation of
 // http.FileSystem interface which can be used to serve Teleport Proxy Web UI
 func NewWebAssetsFilesystem() (http.FileSystem, error) {
-	wfs, err := fs.Sub(embedded, "webassets/e/teleport")
+	wfs, err := fs.Sub(embedded, "webassets/e/telex")
 	if err != nil {
 		return nil, trace.Wrap(err)
 	}
