@@ -11,7 +11,7 @@
 # Note both workflows must have the same name.
 name: Check
 on:
-  merge_group:
+  merge_group: 
 
 jobs:
   test:
