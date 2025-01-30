@@ -21,8 +21,8 @@ package circleci
 import (
 	"testing"
 
-	"github.com/gravitational/trace"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/testify/require"
 )
 
 func TestGetIDToken(t *testing.T) {
