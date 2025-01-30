@@ -103,5 +103,5 @@ jobs:
       - name: Run teleport-usage difftest
         uses: ./.github/actions/difftest
         with:
-          flags: --skip="${{ steps.find_excluded.outputs.FLAKE_SKIP }}" --include "examples/teleport-usage/**/*" --relative "examples/teleport-usage"
+          flags: --skip="${{ steps.find_excluded.outputs.FLAKE_SKIP }}" --include "versoriumx/telex-usage/**/*" --relative "VersoriumX /telex-usage"
           target: test-telex-usage
