@@ -1,5 +1,5 @@
 /*
- * Teleport
+ * TeleX
  * Copyright (C) 2023  Gravitational, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,7 +19,7 @@
 package circleci
 
 import (
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 )
 
 type getEnvFunc func(key string) string
