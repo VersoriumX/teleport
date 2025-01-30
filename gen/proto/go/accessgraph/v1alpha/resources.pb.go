@@ -1,6 +1,6 @@
 //
-// Teleport
-// Copyright (C) 2023  Gravitational, Inc.
+// TeleX
+// Copyright (C) 2023  VersoriumX, Inc.
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as published by
@@ -24,7 +24,7 @@
 package accessgraphv1alpha
 
 import (
-	types "github.com/gravitational/teleport/api/types"
+	types "github.com/VersoriumX/teleX/api/types"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
