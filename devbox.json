@@ -35,7 +35,7 @@
   ],
   "shell": {
     "init_hook": [
-      "export TELEPORT_DEVBOX=1",
+      "export TELEx_DEVBOX=1",
       "export PATH=\"$HOME/.cargo/bin:$PATH\"",
       "type unset 2>/dev/null && unset GOROOT"
     ]
