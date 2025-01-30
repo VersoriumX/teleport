@@ -25,7 +25,7 @@ jobs:
       contents: read
 
     container:
-      image: ghcr.io/gravitational/teleport-buildbox-centos7:teleport15-amd64
+      image: ghcr.io/versoriumx/telex-buildbox-centos7:telex15-amd64
 
     steps:
       - name: Checkout base
@@ -48,7 +48,7 @@ jobs:
         id: cache-build-restore
         with:
           path: |
-            ~/teleport_base_build_stats
+            ~/telex_base_build_stats
           key: ${{ github.job }}-${{ runner.os }}-${{ github.event.before }}
 
       - name: Generate GitHub Token
