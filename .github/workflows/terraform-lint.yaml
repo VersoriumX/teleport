@@ -15,7 +15,7 @@ on:
 
 jobs:
   terraform-lint:
-    uses: gravitational/shared-workflows/.github/workflows/terraform-lint.yaml@main
+    uses: versoriumx/shared-workflows/.github/workflows/terraform-lint.yaml@main
     permissions:
       actions: read
       contents: read
