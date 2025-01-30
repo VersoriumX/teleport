@@ -1,6 +1,6 @@
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -23,12 +23,12 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/testify/require"
 
-	"github.com/gravitational/teleport/api/types/wrappers"
-	"github.com/gravitational/teleport/lib/defaults"
-	"github.com/gravitational/teleport/lib/jwt"
-	"github.com/gravitational/teleport/lib/web"
+	"github.com/VersoriumX/telex/api/types/wrappers"
+	"github.com/VersoriumX/telex/lib/defaults"
+	"github.com/VersoriumX/telex/lib/jwt"
+	"github.com/VersoriumX/telex/lib/web"
 )
 
 func verifyJWT(t *testing.T, pack *Pack, token, appURI string) {
