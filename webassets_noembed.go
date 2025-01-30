@@ -1,8 +1,8 @@
 //go:build !webassets_embed
 
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * Telex
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -18,15 +18,15 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package teleport
+package telex
 
 import (
 	"net/http"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 )
 
-const webAssetsMissingError = "the teleport binary was built without web assets, try building with `make release`"
+const webAssetsMissingError = "the telex binary was built without web assets, try building with `make release`"
 
 // NewWebAssetsFilesystem is a no-op in this build mode.
 func NewWebAssetsFilesystem() (http.FileSystem, error) { //nolint:staticcheck // suppress 'never returns nil' as this is value is platform dependent
