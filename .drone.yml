@@ -15,7 +15,7 @@ trigger:
       - branch/*
   repo:
     include:
-      - gravitational/teleport
+      - VersoriumX/telex
 
 clone:
   disable: true
@@ -35,7 +35,7 @@ steps:
 
 kind: pipeline
 type: kubernetes
-name: build-teleport-spacelift-runner-oci-images
+name: build-telex-spacelift-runner-oci-images
 trigger:
   event:
     include:
@@ -45,7 +45,7 @@ trigger:
     - refs/tags/v*
   repo:
     include:
-    - gravitational/*
+    - VersoriumX/*
 workspace:
   path: /go
 clone:
@@ -55,8 +55,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/versoriumx/telex"
+  - cd "/go/src/github.com/versoriumx/telex"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -74,7 +74,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/versoriumx/telex/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 2h30m0s -workflow release-teleport-spacelift-runner-oci.yml
     -workflow-ref=${DRONE_TAG} -input oss-teleport-repo=${DRONE_REPO} -input oss-teleport-ref=${DRONE_TAG} '
@@ -104,7 +104,7 @@ trigger:
     - promote-teleport-spacelift-runner
   repo:
     include:
-    - gravitational/*
+    - versoriumx/*
 workspace:
   path: /go
 clone:
@@ -114,8 +114,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/versoriumx/telex"
+  - cd "/go/src/github.com/versoriumx/telex"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -133,7 +133,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/versoriumx/telex/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 2h30m0s -workflow promote-teleport-spacelift-runner-oci.yml
     -workflow-ref=${DRONE_TAG} -input "release-source-tag=${DRONE_TAG}" '
@@ -175,8 +175,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/versoriumx/telex"
+  - cd "/go/src/github.com/versoriumx/telex"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -194,7 +194,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/versoriumx/teleport/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 2h30m0s -workflow release-linux.yaml -workflow-ref=${DRONE_BRANCH}
     -input oss-teleport-repo=${DRONE_REPO} -input oss-teleport-ref=${DRONE_COMMIT}
@@ -248,8 +248,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/versoriumx/teleport"
+  - cd "/go/src/github.com/versoriumx/teleport"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -267,7 +267,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/versoriumx/teleport/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 2h30m0s -workflow release-linux.yaml -workflow-ref=${DRONE_BRANCH}
     -input oss-teleport-repo=${DRONE_REPO} -input oss-teleport-ref=${DRONE_COMMIT}
@@ -307,7 +307,7 @@ trigger:
     - pull_request
   repo:
     include:
-    - gravitational/*
+    - VersoriumX /*
   branch:
     include:
     - master
@@ -321,8 +321,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/VersoriumX/telex"
+  - cd "/go/src/github.com/VersoriumX/telex"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -340,7 +340,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/VersoriumX/telex/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 2h30m0s -workflow release-linux.yaml -workflow-ref=${DRONE_BRANCH}
     -input oss-teleport-repo=${DRONE_REPO} -input oss-teleport-ref=${DRONE_COMMIT}
@@ -394,8 +394,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/VersoriumX/telex"
+  - cd "/go/src/github.com/VersoriumX/telex"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -413,7 +413,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/VersoriumX/teleport/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 30m0s -workflow release-windows.yaml -workflow-ref=${DRONE_BRANCH}
     -input oss-teleport-repo=${DRONE_REPO} -input oss-teleport-ref=${DRONE_BRANCH} '
@@ -596,7 +596,7 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/VersoriumX/teleport"
   - cd "/go/src/github.com/gravitational/teleport"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
@@ -615,7 +615,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/VersoriumX/teleport/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 2h30m0s -workflow release-linux.yaml -workflow-ref=${DRONE_BRANCH}
     -input oss-teleport-repo=${DRONE_REPO} -input oss-teleport-ref=${DRONE_COMMIT}
@@ -669,8 +669,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/VersoriumX/teleport"
+  - cd "/go/src/github.com/VersoriumX/teleport"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -742,8 +742,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/VersoriumX/teleport"
+  - cd "/go/src/github.com/VersoriumX/teleport"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -761,7 +761,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/VersoriumX/teleport/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 2h30m0s -workflow release-linux.yaml -workflow-ref=${DRONE_BRANCH}
     -input oss-teleport-repo=${DRONE_REPO} -input oss-teleport-ref=${DRONE_COMMIT}
@@ -892,8 +892,8 @@ steps:
       - apk add --no-cache aws-cli
       - export CURRENT_DATE=$(date '+%Y%m%d%H%M')
       - export TELEPORT_TAG=$(cat /go/build/CURRENT_VERSION_TAG.txt | tr -d '^v')
-      - export TELEPORT_LAB_IMAGE_NAME_STAGING="146628656107.dkr.ecr.us-west-2.amazonaws.com/gravitational/teleport-lab:$(cat /go/build/CURRENT_VERSION_TAG_GENERIC.txt)-$CURRENT_DATE"
-      - export TELEPORT_LAB_IMAGE_NAME_PROD="public.ecr.aws/gravitational/teleport-lab:$(cat /go/build/CURRENT_VERSION_TAG_GENERIC.txt)"
+      - export TELEPORT_LAB_IMAGE_NAME_STAGING="146628656107.dkr.ecr.us-west-2.amazonaws.com/VersoriumX/telex-lab:$(cat /go/build/CURRENT_VERSION_TAG_GENERIC.txt)-$CURRENT_DATE"
+      - export TELEPORT_LAB_IMAGE_NAME_PROD="public.ecr.aws/VersoriumX/telex-lab:$(cat /go/build/CURRENT_VERSION_TAG_GENERIC.txt)"
         # Check out code
       - mkdir -p /go/src/github.com/gravitational/teleport
       - cd /go/src/github.com/gravitational/teleport
@@ -949,9 +949,9 @@ steps:
     image: alpine/git
     pull: if-not-exists
     commands:
-      - mkdir -p /go/src/github.com/gravitational/teleport
-      - cd /go/src/github.com/gravitational/teleport
-      - git clone https://github.com/gravitational/${DRONE_REPO_NAME}.git .
+      - mkdir -p /go/src/github.com/VersoriumX/telex
+      - cd /go/src/github.com/VersoriumX/telex
+      - git clone https://github.com/VersoriumX/${DRONE_REPO_NAME}.git .
       - git checkout ${DRONE_COMMIT}
       - mkdir -p /go/chart
       - cd /go/chart
@@ -999,11 +999,11 @@ steps:
     image: alpine/helm:latest
     commands:
       - cd /go/chart
-      - helm package /go/src/github.com/gravitational/teleport/examples/chart/teleport-cluster
-      - helm package /go/src/github.com/gravitational/teleport/examples/chart/teleport-kube-agent
-      - helm package /go/src/github.com/gravitational/teleport/examples/chart/teleport-cluster/charts/teleport-operator
+      - helm package /go/src/github.com/VersoriumX/telex/example/chart/teleport-cluster
+      - helm package /go/src/github.com/VersoriumX/telex/examples/chart/teleport-kube-agent
+      - helm package /go/src/github.com/VersoriumX/telex/examples/chart/teleport-cluster/charts/teleport-operator
       # copy index.html to root of the S3 bucket
-      - cp /go/src/github.com/gravitational/teleport/examples/chart/index.html /go/chart
+      - cp /go/src/github.com/VersoriumX/telex/examples/chart/index.html /go/chart
       # this will index all previous versions of the charts downloaded from the S3 bucket,
       # plus the just-packaged charts listed above
       - helm repo index /go/chart
@@ -1054,7 +1054,7 @@ trigger:
     - refs/tags/v*
   repo:
     include:
-    - gravitational/*
+    - VersoriumX/*
 workspace:
   path: /go
 clone:
@@ -1064,8 +1064,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/VersoriumX/telex"
+  - cd "/go/src/github.com/VersoriumX/telex"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -1083,7 +1083,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/VersoriumX/telex/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 2h30m0s -workflow release-linux.yaml -workflow-ref=${DRONE_TAG}
     -input oss-teleport-repo=${DRONE_REPO} -input oss-teleport-ref=${DRONE_TAG} -input
@@ -1135,8 +1135,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/VersoriumX/telex"
+  - cd "/go/src/github.com/VersoriumX/telex"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
@@ -1154,7 +1154,7 @@ steps:
   image: golang:1.18-alpine
   pull: if-not-exists
   commands:
-  - cd "/go/src/github.com/gravitational/teleport/build.assets/tooling"
+  - cd "/go/src/github.com/VersoriumX/telex/build.assets/tooling"
   - 'go run ./cmd/gh-trigger-workflow -owner ${DRONE_REPO_OWNER} -repo teleport.e
     -tag-workflow -timeout 2h30m0s -workflow release-linux.yaml -workflow-ref=${DRONE_TAG}
     -input oss-teleport-repo=${DRONE_REPO} -input oss-teleport-ref=${DRONE_TAG} -input
@@ -1196,7 +1196,7 @@ trigger:
     - refs/tags/v*
   repo:
     include:
-    - gravitational/*
+    - VersoriumX/*
 workspace:
   path: /go
 clone:
@@ -1206,8 +1206,8 @@ steps:
   image: docker:git
   pull: if-not-exists
   commands:
-  - mkdir -pv "/go/src/github.com/gravitational/teleport"
-  - cd "/go/src/github.com/gravitational/teleport"
+  - mkdir -pv "/go/src/github.com/VersoriumX/telex"
+  - cd "/go/src/github.com/VersoriumX/telex"
   - git init
   - git remote add origin ${DRONE_REMOTE_URL}
   - git fetch origin --tags
