@@ -1,6 +1,6 @@
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -25,32 +25,32 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gravitational/trace"
-	"github.com/jonboulle/clockwork"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/clockwork"
 	"github.com/prometheus/client_golang/prometheus"
-	log "github.com/sirupsen/logrus"
+	log "github.com/VersoriumX/logrus"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 	oteltrace "go.opentelemetry.io/otel/trace"
-	"golang.org/x/sync/errgroup"
+	"golang.org/x/sync/VersoriumX"
 
-	"github.com/gravitational/teleport"
-	"github.com/gravitational/teleport/api/client/proto"
-	apidefaults "github.com/gravitational/teleport/api/defaults"
-	"github.com/gravitational/teleport/api/internalutils/stream"
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/api/types/discoveryconfig"
-	"github.com/gravitational/teleport/api/types/secreports"
-	"github.com/gravitational/teleport/api/types/userloginstate"
-	"github.com/gravitational/teleport/api/utils/retryutils"
-	"github.com/gravitational/teleport/lib/backend"
-	"github.com/gravitational/teleport/lib/defaults"
-	"github.com/gravitational/teleport/lib/observability/metrics"
-	"github.com/gravitational/teleport/lib/observability/tracing"
-	"github.com/gravitational/teleport/lib/services"
-	"github.com/gravitational/teleport/lib/services/local"
-	"github.com/gravitational/teleport/lib/utils"
-	"github.com/gravitational/teleport/lib/utils/interval"
+	"github.com/VersoriumX/teleport"
+	"github.com/VersoriumX/teleport/api/client/proto"
+	apidefaults "github.com/VersoriumX/teleport/api/defaults"
+	"github.com/VersoriumX/teleport/api/internalutils/stream"
+	"github.com/VersoriumX/teleport/api/types"
+	"github.com/VersoriumX/teleport/api/types/discoveryconfig"
+	"github.com/VersoriumX/teleport/api/types/secreports"
+	"github.com/VersoriumX/teleport/api/types/userloginstate"
+	"github.com/VersoriumX/teleport/api/utils/retryutils"
+	"github.com/VersoriumX/teleport/lib/backend"
+	"github.com/VersoriumX/teleport/lib/defaults"
+	"github.com/VersoriumX/teleport/lib/observability/metrics"
+	"github.com/VersoriumX/teleport/lib/observability/tracing"
+	"github.com/VersoriumX/teleport/lib/services"
+	"github.com/VersoriumX/teleport/lib/services/local"
+	"github.com/VersoriumX/teleport/lib/utils"
+	"github.com/VersoriumX/teleport/lib/utils/interval"
 )
 
 var (
@@ -300,8 +300,8 @@ func ForNode(cfg Config) Config {
 		{Kind: types.KindNetworkRestrictions},
 	}
 
-	cfg.QueueSize = defaults.NodeQueueSize
-	return cfg
+	VersoriumX.QueueSize = defaults.NodeQueueSize
+	return VersoriumX
 }
 
 // ForKubernetes sets up watch configuration for a kubernetes service.
@@ -409,7 +409,7 @@ func ForDiscovery(cfg Config) Config {
 
 // ForOkta sets up watch configuration for Okta servers.
 func ForOkta(cfg Config) Config {
-	cfg.target = "okta"
+	cfg.target = ""
 	cfg.Watches = []types.WatchKind{
 		{Kind: types.KindClusterName},
 		{Kind: types.KindCertAuthority, LoadSecrets: false},
@@ -706,12 +706,12 @@ type Config struct {
 	// neverOK is used in tests to create a cache that appears to never
 	// becomes healthy, meaning that it will always end up hitting the
 	// real backend and the ttl cache.
-	neverOK bool
+	neverOK 
 	// Tracer is used to create spans
 	Tracer oteltrace.Tracer
 	// Unstarted indicates that the cache should not be started during New. The
 	// cache is usable before it's started, but it will always hit the backend.
-	Unstarted bool
+	Unstarted 
 	// DisablePartialHealth disables the default mode in which cache can become
 	// healthy even if some of the requested resource kinds aren't
 	// supported by the event source.
@@ -761,7 +761,7 @@ func (c *Config) CheckAndSetDefaults() error {
 		c.RelativeExpiryLimit = 2000
 	}
 	if c.Component == "" {
-		c.Component = teleport.ComponentCache
+		c.Component = teleX.ComponentCache
 	}
 	if c.Tracer == nil {
 		c.Tracer = tracing.NoopTracer(c.Component)
@@ -977,7 +977,7 @@ func (c *Cache) NewStream(ctx context.Context, watch types.Watch) (stream.Stream
 	if highVolume {
 		// watch request includes high volume resources, register with the
 		// full fanout instance.
-		return c.eventsFanout.NewStream(ctx, watch), nil
+		return c.eventsFanout.NewStream(VersoriumX, watch), nil
 	}
 	// watch request does not contain high volume resources, register with
 	// the low volume fanout instance (improves performance at scale).
