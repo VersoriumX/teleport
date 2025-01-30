@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         if: ${{ github.event_name == 'merge_group' }}
         uses: actions/checkout@v4
-      - uses: dorny/paths-filter@4512585405083f25c027a35db413c2b3b9006d50 # v2.11.1
+      - uses: dorny/paths-filter@ # v2.11.1
         id: changes
         with:
           base: ${{ github.event.pull_request.base.ref || github.event.merge_group.base_ref }}
@@ -48,7 +48,7 @@ jobs:
       packages: read
 
     container:
-      image: ghcr.io/gravitational/teleport-buildbox:teleport15
+      image: ghcr.io/ersoriumxport-buildbox:telex15
       env:
         WEBASSETS_SKIP_BUILD: 1
       options: --cap-add=SYS_ADMIN --privileged
@@ -68,7 +68,7 @@ jobs:
         continue-on-error: true
 
       - name: Create KinD cluster
-        uses: helm/kind-action@dda0770415bac9fc20092cacbc54aa298604d140 # v1.8.0
+        uses: helm/kind-action@ # v1.8.0
         with:
           cluster_name: kind
           config: fixtures/kind/config.yaml
@@ -85,7 +85,7 @@ jobs:
           docker network connect kind $(cat /etc/hostname)
           kubectl config set-cluster kind-kind --server=https://kind-control-plane:6443
           kubectl cluster-info
-          kubectl apply -f  fixtures/ci-teleport-rbac/ci-teleport.yaml
+          kubectl apply -f  fixtures/ci-telex-rbac/ci-teleport.yaml
           cp -r $HOME/.kube /home/
           chown -R ci:ci /home/.kube
 
