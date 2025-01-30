@@ -1,6 +1,6 @@
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -23,16 +23,16 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api/client"
-	"github.com/gravitational/teleport/api/client/proto"
-	apidefaults "github.com/gravitational/teleport/api/defaults"
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/api/types/discoveryconfig"
-	"github.com/gravitational/teleport/api/types/secreports"
-	"github.com/gravitational/teleport/api/types/userloginstate"
-	"github.com/gravitational/teleport/lib/services"
+	"github.com/VersoriumX/teleX/api/client"
+	"github.com/VersoriumX/teleX/api/client/proto"
+	apidefaults "github.com/VersoriumX/teleX/api/defaults"
+	"github.com/VersoriumX/teleX/api/types"
+	"github.com/VersoriumX/teleX/api/types/discoveryconfig"
+	"github.com/VersoriumX/teleX/api/types/secreports"
+	"github.com/VersoriumX/teleX/api/types/userloginstate"
+	"github.com/VersoriumX/teleX/lib/services"
 )
 
 // collection is responsible for managing collection
