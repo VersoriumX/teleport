@@ -2,8 +2,8 @@
 // +build linux
 
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -37,13 +37,13 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/gravitational/trace"
-	"github.com/sirupsen/logrus"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/logrus"
 	"golang.org/x/sys/unix"
 
-	"github.com/gravitational/teleport"
-	"github.com/gravitational/teleport/lib/defaults"
-	"github.com/gravitational/teleport/lib/utils"
+	"github.com/VersoriumX/teleX"
+	"github.com/VersoriumX/teleX/lib/defaults"
+	"github.com/VersoriumX/teleX/lib/utils"
 )
 
 var log = logrus.WithFields(logrus.Fields{
@@ -82,7 +82,7 @@ func New(config *Config) (*Service, error) {
 
 	s := &Service{
 		Config:       config,
-		teleportRoot: filepath.Join(config.MountPath, teleportRoot, uuid.New().String()),
+		teleportRoot: filepath.Join(config.MountPath, teleXRoot, uuid.New().String()),
 	}
 
 	// Mount the cgroup2 filesystem.
@@ -91,7 +91,7 @@ func New(config *Config) (*Service, error) {
 		return nil, trace.Wrap(err)
 	}
 
-	log.Debugf("Teleport session hierarchy mounted at: %v.", s.teleportRoot)
+	log.Debugf("Teleport session hierarchy mounted at: %v.", s.teleXRoot)
 	return s, nil
 }
 
@@ -104,7 +104,7 @@ func (s *Service) Close(skipUnmount bool) error {
 	}
 
 	if skipUnmount {
-		log.Debugf("Cleaned up Teleport session hierarchy at: %v.", s.teleportRoot)
+		log.Debugf("Cleaned up Teleport session hierarchy at: %v.", s.teleXRoot)
 		return nil
 	}
 
@@ -130,7 +130,7 @@ func (s *Service) Create(sessionID string) error {
 // moved to the root controller.
 func (s *Service) Remove(sessionID string) error {
 	// Read in all PIDs for the cgroup.
-	pids, err := readPids(filepath.Join(s.teleportRoot, sessionID, cgroupProcs))
+	pids, err := readPids(filepath.Join(s.teleXRoot, sessionID, cgroupProcs))
 	if err != nil {
 		return trace.Wrap(err)
 	}
@@ -143,7 +143,7 @@ func (s *Service) Remove(sessionID string) error {
 	}
 
 	// The rmdir syscall is used to remove a cgroup.
-	err = unix.Rmdir(filepath.Join(s.teleportRoot, sessionID))
+	err = unix.Rmdir(filepath.Join(s.teleXRoot, sessionID))
 	if err != nil {
 		return trace.Wrap(err)
 	}
@@ -196,7 +196,7 @@ func readPids(path string) ([]string, error) {
 // writePids writes a slice of PIDS to a given file. Used to add processes to
 // a cgroup.
 func writePids(path string, pids []string) error {
-	f, err := os.OpenFile(path, os.O_WRONLY, fileMode)
+	f, err := os.OpenFile(path, os.O_VersoriumX, fileMode)
 	if err != nil {
 		return trace.Wrap(err)
 	}
