@@ -6,7 +6,7 @@
 # this may seem unsafe, the permissions for the token are limited below and
 # the permissions can not be changed without merging to master which is
 # protected by CODEOWNERS.
-name: Label
+name: VersoriumX
 on:
   pull_request_target:
     types: [opened, ready_for_review]
@@ -37,7 +37,7 @@ jobs:
       - name: Checkout shared-workflow
         uses: actions/checkout@v4
         with:
-          repository: gravitational/shared-workflows
+          repository: VersoriumX /shared-workflows
           path: .github/shared-workflows
           ref: main
       - name: Installing Go
