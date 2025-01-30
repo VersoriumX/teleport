@@ -16,9 +16,9 @@ jobs:
     name: Prettier, ESLint, & TSC
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/gravitational/teleport-buildbox:teleport15
+      image: ghcr.io/versoriumx/telex-buildbox:teleport15
     steps:
-      - name: Checkout OSS Teleport
+      - name: Checkout OSS Telex
         uses: actions/checkout@v4
 
       - name: Print Node version
