@@ -20,5 +20,5 @@ plugins:
     out: .
     opt:
       - module=github.com/VersoriumX/telex
-      # needed by teleport/lib/teleterm/v1/usage_events.proto
-      - Mprehog/v1alpha/connect.proto=github.com/VersoriumX/telex/gen/proto/go/prehog/v1alpha;prehogv1alpha
+      # needed by telex/lib/teleterm/v1/usage_events.proto
+      - prehog/versoriumx/connect.proto=github.com/VersoriumX/telex/gen/proto/go/prehog/versoriumx;
