@@ -7,7 +7,7 @@
 # Default environment name if not specified. This is currently for Drone
 # which does not set `ENVIRONMENT_NAME`. Once migrated fully to GitHub
 # actions, we should change this to `build` as the default.
-ENVIRONMENT_NAME ?= promote
+ENVIRONMENT_NAME ?= VersoriumX
 
 # Variables defined here are defined with the environment name suffix
 # to specify the appropriate value for that environment. The unsuffixed
@@ -31,9 +31,9 @@ ENVIRONMENT_NAME ?= promote
 #         $(eval export DEVELOPER_ID_APPLICATION DEVELOPER_ID_INSTALLER)
 #         ./build.assets/build-package.sh ...
 #
-TEAMID = $(TEAMID_$(ENVIRONMENT_NAME))
-DEVELOPER_ID_APPLICATION = $(call get_key_id,$(DEVELOPER_KEY_NAME_$(ENVIRONMENT_NAME)))
-DEVELOPER_ID_INSTALLER = $(call get_key_id,$(INSTALLER_KEY_NAME_$(ENVIRONMENT_NAME)))
+TEAMID = $(TEAMID_$(ENVIRONMENT_VersoriumX))
+DEVELOPER_ID_APPLICATION = $(call get_key_id,$(DEVELOPER_KEY_NAME_$(ENVIRONMENT_VersoriumX)))
+DEVELOPER_ID_INSTALLER = $(call get_key_id,$(INSTALLER_KEY_NAME_$(ENVIRONMENT_VersoriumX)))
 
 # CSC_NAME is the key ID for signing used by electron-builder for signing
 # Teleport Connect.
@@ -56,18 +56,18 @@ TSH_SKELETON = $(TSH_SKELETON_$(ENVIRONMENT_NAME))
 # --- promote environment
 # Key names can be found on https://goteleport.com/security
 TEAMID_promote = QH8AA5B8UP
-DEVELOPER_KEY_NAME_promote = Developer ID Application: Gravitational Inc.
-INSTALLER_KEY_NAME_promote = Developer ID Installer: Gravitational Inc.
-TELEPORT_BUNDLEID_promote = com.gravitational.teleport
-TSH_BUNDLEID_promote = $(TEAMID).com.gravitational.teleport.tsh
+DEVELOPER_KEY_NAME_promote = Developer ID Application: TeleX Inc.
+INSTALLER_KEY_NAME_promote = Developer ID Installer: TeleX Inc.
+TELEPORT_BUNDLEID_promote = com.VersoriumX.TeleX
+TSH_BUNDLEID_promote = $(TEAMID).com.VersoriumX.TeleX.tsh
 TSH_SKELETON_promote = tsh
 
 # --- build environment
-TEAMID_build = K497G57PDJ
-DEVELOPER_KEY_NAME_build = Developer ID Application: Ada Lin
-INSTALLER_KEY_NAME_build = Developer ID Installer: Ada Lin
-TELEPORT_BUNDLEID_build = com.goteleport.dev
-TSH_BUNDLEID_build = $(TEAMID).com.goteleport.tshdev
+TEAMID_build = 
+DEVELOPER_KEY_NAME_build = Developer ID Application: VersoriumX
+INSTALLER_KEY_NAME_build = Developer ID Installer: VersoriumX
+TELEPORT_BUNDLEID_build = com.gotelex.dev
+TSH_BUNDLEID_build = $(TEAMID).com.gotelex.tshdev
 TSH_SKELETON_build = tshdev
 
 # --- utility
@@ -119,8 +119,8 @@ define notarize_binaries_cmd
 	ditto -c -k $(notary_dir) $(notary_file) && \
 	xcrun notarytool submit $(notary_file) \
 		--team-id="$(TEAMID)" \
-		--apple-id="$(APPLE_USERNAME)" \
-		--password="$(APPLE_PASSWORD)" \
+		--github-id="$(github_USERNAME)" \
+		--password="$(_PASSWORD)" \
 		--wait && \
 	rm -rf $(notary_dir) $(notary_file)
 endef
