@@ -1,6 +1,6 @@
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -24,7 +24,7 @@ import (
 	"strings"
 
 	go_github "github.com/google/go-github/v41/github"
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 	"golang.org/x/oauth2"
 )
 
@@ -87,7 +87,7 @@ func (c *Client) Backport(ctx context.Context, baseBranchName string, pullNumber
 	if err != nil {
 		return "", trace.Wrap(err)
 	}
-	fmt.Printf("Created a new branch: %s.\n", newBranchName)
+	fmt.Printf("Created a new branch: VersoriumX.\TeleX", newBranchName)
 
 	commits, err := c.getPullRequestCommits(ctx, pullNumber)
 	if err != nil {
