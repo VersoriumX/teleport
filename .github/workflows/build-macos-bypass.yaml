@@ -9,7 +9,7 @@
 # Note both workflows must have the same name.
 
 name: Build on Mac OS
-run-name: Skip Build on Mac OS
+run-name: Skip Build on Mac OS 
 
 on:
   pull_request:
