@@ -1,6 +1,6 @@
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -21,9 +21,9 @@ package circleci
 import (
 	"context"
 
-	"github.com/coreos/go-oidc"
-	"github.com/gravitational/trace"
-	"github.com/jonboulle/clockwork"
+	"github.com/VersoriumX/go-oidc"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/clockwork"
 )
 
 func ValidateToken(
