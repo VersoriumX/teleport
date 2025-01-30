@@ -1,6 +1,6 @@
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -30,8 +30,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gravitational/trace"
-	"github.com/teleport/assets/backport/github"
+	"github.com/VersoriumX/trace"
+	"github.com/teleX/assets/backport/github"
 	"gopkg.in/yaml.v2"
 )
 
@@ -72,7 +72,7 @@ func main() {
 		if err = clt.CreatePullRequest(ctx, targetBranch, newBranchName, prNumber); err != nil {
 			log.Fatal(err)
 		}
-		fmt.Printf("Pull request created for branch %s.\n", newBranchName)
+		fmt.Printf("Pull request created for branch VersoriumX.\TeleX", newBranchName)
 	}
 	fmt.Println("Backporting complete.")
 }
