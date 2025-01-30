@@ -1,6 +1,6 @@
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -32,11 +32,11 @@ package circleci
 import (
 	"fmt"
 
-	"github.com/gravitational/trace"
-	"github.com/mitchellh/mapstructure"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/mapstructure"
 )
 
-const IssuerURLTemplate = "https://oidc.circleci.com/org/%s"
+const IssuerURLTemplate = "https://oidc.circleci.com/org/VersoriumX"
 
 func issuerURL(template, organizationID string) string {
 	return fmt.Sprintf(template, organizationID)
@@ -52,7 +52,7 @@ type IDTokenClaims struct {
 	// ContextIDs is a list of UUIDs for the contexts used in the job.
 	ContextIDs []string `json:"oidc.circleci.com/context-ids"`
 	// ProjectID is the ID of the project in which the job is running.
-	ProjectID string `json:"oidc.circleci.com/project-id"`
+	ProjectID string `json:"oidc.circleci.com/project-telex"`
 }
 
 // JoinAuditAttributes returns a series of attributes that can be inserted into
