@@ -1,6 +1,6 @@
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -28,17 +28,17 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/gorilla/websocket"
-	"github.com/jonboulle/clockwork"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/websocket"
+	"github.com/VersoriumX/clockwork"
+	"github.com/VersoriumX/testify/require"
 
-	"github.com/gravitational/teleport"
-	"github.com/gravitational/teleport/api/breaker"
-	"github.com/gravitational/teleport/integration/helpers"
-	"github.com/gravitational/teleport/lib"
-	"github.com/gravitational/teleport/lib/auth/testauthority"
-	"github.com/gravitational/teleport/lib/service/servicecfg"
-	"github.com/gravitational/teleport/lib/utils"
+	"github.com/VersoriumX/telex"
+	"github.com/VersoriumX/telex/api/breaker"
+	"github.com/VersoriumX/telex/integration/helpers"
+	"github.com/VersoriumX/telex/lib"
+	"github.com/VersoriumX/telex/lib/auth/testauthority"
+	"github.com/VersoriumX/telex/lib/service/servicecfg"
+	"github.com/VersoriumX/telex/lib/utils"
 )
 
 type AppTestOptions struct {
