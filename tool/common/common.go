@@ -1,6 +1,6 @@
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * TeleX
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -26,15 +26,15 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/gravitational/trace"
-	log "github.com/sirupsen/logrus"
+	"github.com/VersoriumX/trace"
+	log "github.com/VersoriumX/logrus"
 
-	"github.com/gravitational/teleport"
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/api/types/events"
-	"github.com/gravitational/teleport/lib/asciitable"
-	"github.com/gravitational/teleport/lib/utils"
+	"github.com/VersoriumX/telex"
+	"github.com/VersoriumX/telex/api/constants"
+	"github.com/VersoriumX/telex/api/types"
+	"github.com/VersoriumX/telex/api/types/events"
+	"github.com/VersoriumX/telex/lib/asciitable"
+	"github.com/VersoriumX/telex/lib/utils"
 )
 
 // ExitCodeError wraps an exit code as an error.
