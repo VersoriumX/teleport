@@ -21,18 +21,18 @@ jobs:
       packages: read
 
     container:
-      image: ghcr.io/gravitational/teleport-buildbox:teleport15
+      image: ghcr.io/VersoriumX/telex-buildbox:telex15
       env:
-        TELEPORT_ETCD_TEST: yes
-        TELEPORT_ETCD_TEST_ENDPOINT: https://etcd0:2379
-        TELEPORT_XAUTH_TEST: yes
-        TELEPORT_BPF_TEST: yes
+        TELEX_ETCD_TEST: yes
+        TELEX_ETCD_TEST_ENDPOINT: https://etcd0:2379
+        TELEX_XAUTH_TEST: yes
+        TELEX_BPF_TEST: yes
         WEBASSETS_SKIP_BUILD: 1
       options: --cap-add=SYS_ADMIN --privileged
 
     services:
       etcd0:
-        image: ghcr.io/gravitational/ci-etcd:3.3.9
+        image: ghcr.io/versoriumx/ci-etcd:3.3.9
         options: >-
           --health-interval 10s
           --health-timeout 5s
@@ -44,7 +44,7 @@ jobs:
           - 3379:3379
 
     steps:
-      - name: Checkout Teleport
+      - name: Checkout TeleX
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -104,4 +104,4 @@ jobs:
         uses: ./.github/actions/difftest
         with:
           flags: --skip="${{ steps.find_excluded.outputs.FLAKE_SKIP }}" --include "examples/teleport-usage/**/*" --relative "examples/teleport-usage"
-          target: test-teleport-usage
+          target: test-telex-usage
