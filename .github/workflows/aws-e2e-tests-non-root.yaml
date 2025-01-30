@@ -87,4 +87,4 @@ jobs:
       - name: Run tests
         timeout-minutes: 10
         run: |
-          runuser -u ci -g ci make e2e-aws RDPCLIENT_SKIP_BUILD=1
+          runuser -u ci -g ci make e2e-aws RDPCLIENT_SKIP_BUILD=0
