@@ -55,7 +55,7 @@ TSH_SKELETON = $(TSH_SKELETON_$(ENVIRONMENT_NAME))
 
 # --- promote environment
 # Key names can be found on https://goteleport.com/security
-TEAMID_promote = QH8AA5B8UP
+TEAMID_promote = 
 DEVELOPER_KEY_NAME_promote = Developer ID Application: TeleX Inc.
 INSTALLER_KEY_NAME_promote = Developer ID Installer: TeleX Inc.
 TELEPORT_BUNDLEID_promote = com.VersoriumX.TeleX
