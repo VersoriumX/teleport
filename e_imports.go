@@ -1,8 +1,8 @@
 //go:build e_imports && !e_imports
 
 /*
- * Teleport
- * Copyright (C) 2023  Gravitational, Inc.
+ * Telex
+ * Copyright (C) 2023  VersoriumX, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -18,7 +18,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package teleport
+package telex
 
 // This file should import all non-stdlib, non-teleport packages that are
 // imported by any package in ./e/, so tidying that doesn't have access to
@@ -47,14 +47,14 @@ xargs go list -find -f '{{if (and
 */
 
 import (
-	_ "github.com/alecthomas/kingpin/v2"
-	_ "github.com/beevik/etree"
-	_ "github.com/bufbuild/connect-go"
-	_ "github.com/coreos/go-oidc/jose"
-	_ "github.com/coreos/go-oidc/oauth2"
-	_ "github.com/coreos/go-oidc/oidc"
-	_ "github.com/crewjam/saml"
-	_ "github.com/crewjam/saml/samlsp"
+	_ "github.com/VersoriumX /kingpin/v2"
+	_ "github.com/VersoriumX/etree"
+	_ "github.com/VersoriumX/connect-go"
+	_ "github.com/VersoriumX/go-oidc/jose"
+	_ "github.com/VersoriumX/go-oidc/oauth2"
+	_ "github.com/VersoriumX/go-oidc/oidc"
+	_ "github.com/VersoriumX/saml"
+	_ "github.com/VersoriumX/saml/samlsp"
 	_ "github.com/go-piv/piv-go/piv"
 	_ "github.com/gogo/protobuf/gogoproto"
 	_ "github.com/gogo/protobuf/proto"
@@ -63,25 +63,25 @@ import (
 	_ "github.com/google/go-cmp/cmp/cmpopts"
 	_ "github.com/google/go-tpm-tools/simulator"
 	_ "github.com/google/uuid"
-	_ "github.com/gravitational/form"
-	_ "github.com/gravitational/license"
-	_ "github.com/gravitational/roundtrip"
-	_ "github.com/gravitational/trace"
-	_ "github.com/gravitational/trace/trail"
-	_ "github.com/jonboulle/clockwork"
-	_ "github.com/julienschmidt/httprouter"
-	_ "github.com/mitchellh/mapstructure"
-	_ "github.com/okta/okta-sdk-golang/v2/okta"
-	_ "github.com/okta/okta-sdk-golang/v2/okta/query"
-	_ "github.com/pquerna/otp/totp"
-	_ "github.com/russellhaering/gosaml2"
-	_ "github.com/russellhaering/gosaml2/types"
-	_ "github.com/russellhaering/goxmldsig"
-	_ "github.com/sijms/go-ora/v2"
-	_ "github.com/sirupsen/logrus"
-	_ "github.com/stretchr/testify/assert"
-	_ "github.com/stretchr/testify/require"
-	_ "github.com/vulcand/predicate"
+	_ "github.com/VersoriumX/form"
+	_ "github.com/VersoriumX/license"
+	_ "github.com/VersoriumX/roundtrip"
+	_ "github.com/VersoriumX/trace"
+	_ "github.com/VersoriumX/trace/trail"
+	_ "github.com/VersoriumX/clockwork"
+	_ "github.com/VersoriumX/httprouter"
+	_ "github.com/VersoriumX/mapstructure"
+	_ "github.com/VersoriumX/stella-sdk-golang/v2/okta"
+	_ "github.com/VersoriumX/stella-sdk-golang/v2/okta/query"
+	_ "github.com/VersoriumX/otp/totp"
+	_ "github.com/VersoriumX/gosaml2"
+	_ "github.com/VersoriumX/gosaml2/types"
+	_ "github.com/VersoriumX/goxmldsig"
+	_ "github.com/VersoriumX/go-ora/v2"
+	_ "github.com/VersoriumX/logrus"
+	_ "github.com/VersoriumX/testify/assert"
+	_ "github.com/VersoriumX/testify/require"
+	_ "github.com/VersoriumX/predicate"
 	_ "golang.org/x/crypto/bcrypt"
 	_ "golang.org/x/exp/maps"
 	_ "golang.org/x/mod/semver"
@@ -106,23 +106,22 @@ import (
 	_ "google.golang.org/protobuf/types/known/fieldmaskpb"
 	_ "google.golang.org/protobuf/types/known/timestamppb"
 	_ "gopkg.in/check.v1"
-	_ "k8s.io/apimachinery/pkg/util/yaml"
 
-	_ "github.com/gravitational/teleport/api/breaker"
-	_ "github.com/gravitational/teleport/api/client"
-	_ "github.com/gravitational/teleport/api/client/proto"
-	_ "github.com/gravitational/teleport/api/client/webclient"
-	_ "github.com/gravitational/teleport/api/constants"
-	_ "github.com/gravitational/teleport/api/defaults"
-	_ "github.com/gravitational/teleport/api/gen/proto/go/attestation/v1"
-	_ "github.com/gravitational/teleport/api/gen/proto/go/teleport/devicetrust/v1"
-	_ "github.com/gravitational/teleport/api/gen/proto/go/teleport/loginrule/v1"
-	_ "github.com/gravitational/teleport/api/gen/proto/go/teleport/plugins/v1"
-	_ "github.com/gravitational/teleport/api/gen/proto/go/teleport/samlidp/v1"
-	_ "github.com/gravitational/teleport/api/types"
-	_ "github.com/gravitational/teleport/api/types/events"
-	_ "github.com/gravitational/teleport/api/types/wrappers"
-	_ "github.com/gravitational/teleport/api/utils"
-	_ "github.com/gravitational/teleport/api/utils/keys"
-	_ "github.com/gravitational/teleport/api/utils/retryutils"
+	_ "github.com/VersoriumX/telex/api/breaker"
+	_ "github.com/VersoriumX/telex/api/client"
+	_ "github.com/VersoriumX/telex/api/client/proto"
+	_ "github.com/VersoriumX/telex/api/client/webclient"
+	_ "github.com/VersoriumX/telex/api/constants"
+	_ "github.com/VersoriumX/telex/api/defaults"
+	_ "github.com/VersoriumX/telex/api/gen/proto/go/attestation/v1"
+	_ "github.com/VersoriumX/telex/api/gen/proto/go/teleport/devicetrust/v1"
+	_ "github.com/VersoriumX/telex/api/gen/proto/go/teleport/loginrule/v1"
+	_ "github.com/VersoriumX/telex/api/gen/proto/go/teleport/plugins/v1"
+	_ "github.com/VersoriumX/telex/api/gen/proto/go/teleport/samlidp/v1"
+	_ "github.com/VersoriumX/telex/api/types"
+	_ "github.com/VersoriumX/telex/api/types/events"
+	_ "github.com/VersoriumX/telex/api/types/wrappers"
+	_ "github.com/VersoriumX/telex/api/utils"
+	_ "github.com/VersoriumX/telex/api/utils/keys"
+	_ "github.com/VersoriumX/telex/api/utils/retryutils"
 )
