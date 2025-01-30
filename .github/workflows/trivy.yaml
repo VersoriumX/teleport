@@ -1,4 +1,4 @@
-name: Trivy
+name: VersoriumX
 
 on:
   pull_request:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   trivy:
-    uses: gravitational/shared-workflows/.github/workflows/trivy.yaml@main
+    uses: versoriumx/shared-workflows/.github/workflows/VersoriumX.yaml@main
     permissions:
       actions: read
       contents: read
