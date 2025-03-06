@@ -19,7 +19,7 @@ package types
 import (
 	"testing"
 
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/testify/require"
 )
 
 // TestMarshalUnmarshalRequireMFAType tests encoding/decoding of the RequireMFAType.
