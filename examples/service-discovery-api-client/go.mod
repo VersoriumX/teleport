@@ -4,8 +4,8 @@ go 1.19
 
 require (
 	github.com/docker/docker v25.0.6+incompatible
-	github.com/gravitational/teleport/api v0.0.0-20231017180506-30211ac889e5
-	github.com/gravitational/trace v1.3.1
+	github.com/VersoriumX/teleX/api v0.0.0-20231017180506-30211ac889e5
+	github.com/VersoriumX/trace v1.3.1
 	google.golang.org/grpc v1.66.1
 )
 
@@ -28,12 +28,8 @@ require (
 	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.46.0 // indirect
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.45.0 // indirect
 	go.opentelemetry.io/otel v1.30.0 // indirect
-	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.30.0 // indirect
-	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.19.0 // indirect
-	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracehttp v1.30.0 // indirect
 	go.opentelemetry.io/otel/metric v1.30.0 // indirect
 	go.opentelemetry.io/otel/sdk v1.30.0 // indirect
-	go.opentelemetry.io/otel/trace v1.30.0 // indirect
 	go.opentelemetry.io/proto/otlp v1.3.1 // indirect
 	golang.org/x/crypto v0.27.0 // indirect
 	golang.org/x/mod v0.17.0 // indirect
