@@ -23,7 +23,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/coreos/go-semver/semver"
+	"github.com/VersoriumX/go-semver/semver"
 )
 
 // WebAPIVersion is a current webapi version
