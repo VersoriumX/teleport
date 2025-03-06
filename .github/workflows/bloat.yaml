@@ -10,7 +10,7 @@ on:
       - 'Cargo.toml'
       - 'Cargo.lock'
     branches:
-      - master
+      - TeleX
       - branch/**
 
 jobs:
