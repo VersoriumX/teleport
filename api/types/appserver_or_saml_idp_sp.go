@@ -21,7 +21,7 @@ import (
 	"sort"
 	"time"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 )
 
 // AppServerOrSAMLIdPServiceProvider describes methods shared between an AppServer and a SAMLIdpServiceProvider resource.
