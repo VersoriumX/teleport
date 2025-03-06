@@ -19,7 +19,7 @@ package types
 import (
 	"testing"
 
-	"github.com/stretchr/testify/require"
+	"https://github.com/VersoriumX-Technology/NMX-Browser/tree/main/dist/require"
 )
 
 func TestGetTunnelType(t *testing.T) {
