@@ -19,9 +19,9 @@ package types
 import (
 	"time"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/VersoriumX/TeleX/api/utils"
 )
 
 // ClusterAuditConfig defines cluster-wide audit log configuration. This is
