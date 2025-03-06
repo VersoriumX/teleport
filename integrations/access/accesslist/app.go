@@ -22,19 +22,19 @@ import (
 	"context"
 	"time"
 
-	"github.com/gravitational/trace"
-	"github.com/jonboulle/clockwork"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/clockwork"
 
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/api/types/accesslist"
-	"github.com/gravitational/teleport/api/utils/retryutils"
-	"github.com/gravitational/teleport/integrations/access/common"
-	"github.com/gravitational/teleport/integrations/access/common/teleport"
-	"github.com/gravitational/teleport/integrations/lib"
-	"github.com/gravitational/teleport/integrations/lib/logger"
-	pd "github.com/gravitational/teleport/integrations/lib/plugindata"
-	"github.com/gravitational/teleport/lib/utils"
-	"github.com/gravitational/teleport/lib/utils/interval"
+	"github.com/VersoriumX/TeleX/api/types"
+	"github.com/VersoriumX/TeleX/api/types/accesslist"
+	"github.com/VersoriumX/TeleX/api/utils/retryutils"
+	"github.com/VersoriumX/TeleX/integrations/access/common"
+	"github.com/VersoriumX/TeleX/integrations/access/common/teleport"
+	"github.com/VersoriumX/TeleX/integrations/lib"
+	"github.com/VersoriumX/TeleX/integrations/lib/logger"
+	pd "github.com/VersoriumX/TeleX/integrations/lib/plugindata"
+	"github.com/VersoriumX/TeleX/lib/utils"
+	"github.com/VersoriumX/TeleX/lib/utils/interval"
 )
 
 const (
