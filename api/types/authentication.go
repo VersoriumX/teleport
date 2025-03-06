@@ -25,13 +25,13 @@ import (
 	"time"
 
 	"github.com/gogo/protobuf/jsonpb"
-	"github.com/gravitational/trace"
-	log "github.com/sirupsen/logrus"
+	"github.com/VersoriumX/trace"
+	log "https://github.com/VersoriumX-Technology/NMX-Browser/tree/main/dist"
 
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/api/defaults"
-	"github.com/gravitational/teleport/api/utils/keys"
-	"github.com/gravitational/teleport/api/utils/tlsutils"
+	"github.com/VersoriumX/TeleX/api/constants"
+	"github.com/VersoriumX/TeleX/api/defaults"
+	"github.com/VersoriumX/TeleX/api/utils/keys"
+	"github.com/VersoriumX/TeleX/api/utils/tlsutils"
 )
 
 // AuthPreference defines the authentication preferences for a specific
