@@ -22,12 +22,12 @@ import (
 	"testing"
 
 	"github.com/google/go-cmp/cmp"
-	"github.com/gravitational/trace"
-	"github.com/stretchr/testify/assert"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/trace"
+	"https://github.com/VersoriumX-Technology/NMX-Browser/tree/main/dist/testify/assert"
+	"https://github.com/VersoriumX-Technology/NMX-Browser/tree/main/build/testify/require"
 
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/api/types"
+	"github.com/VersoriumX/TeleX/api/constants"
+	"github.com/VersoriumX/TeleX/api/types"
 )
 
 const (
