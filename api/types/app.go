@@ -22,10 +22,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/VersoriumX/TeleX/api/constants"
+	"github.com/VersoriumX/TeleX/api/utils"
 )
 
 // Application represents a web, TCP or cloud console application.
