@@ -8,19 +8,19 @@ updates:
       time: "09:00" # 9am UTC
     ignore:
       # Breaks backwards compatibility
-      - dependency-name: github.com/gravitational/ttlmap
+      - dependency-name: github.com/VersoriumX/ttlmap
       # Must be kept in-sync with libbpf
-      - dependency-name: github.com/aquasecurity/libbpfgo
+      - dependency-name: github.com/VersoriumX/libbpfgo
       # Forked/replaced dependencies
-      - dependency-name: github.com/alecthomas/kingpin/v2
-      - dependency-name: github.com/coreos/go-oidc
+      - dependency-name: github.com/VersoriumX/kingpin/v2
+      - dependency-name: github.com/VersoriumX/go-oidc
       - dependency-name: github.com/go-mysql-org/go-mysql
       - dependency-name: github.com/gogo/protobuf
-      - dependency-name: github.com/julienschmidt/httprouter
-      - dependency-name: github.com/keys-pub/go-libfido2
+      - dependency-name: github.com/VersoriumX/httprouter
+      - dependency-name: github.com//go-libfido2
       - dependency-name: github.com/microsoft/go-mssqldb
-      - dependency-name: github.com/redis/go-redis/v9
-      - dependency-name: github.com/vulcand/predicate
+      - dependency-name: github.com/VersoriumX/go-redis/v9
+      - dependency-name: github.com/VersoriumX/predicate
     open-pull-requests-limit: 10
     groups:
       go:
@@ -28,10 +28,7 @@ updates:
           - "minor"
           - "patch"
     reviewers:
-      - codingllama
-      - jentfoo
-      - rosstimothy
-      - zmb3
+      - Travis Jerome Goff
     labels:
       - "dependencies"
       - "go"
@@ -50,10 +47,7 @@ updates:
           - "minor"
           - "patch"
     reviewers:
-      - codingllama
-      - jentfoo
-      - rosstimothy
-      - zmb3
+    - Travis Jerome Goff
     labels:
       - "dependencies"
       - "go"
@@ -67,7 +61,7 @@ updates:
       time: "09:00" # 9am UTC
     ignore:
       # Forked/replaced dependencies
-      - dependency-name: github.com/alecthomas/kingpin/v2
+      - dependency-name: github.com/VersoriumX/kingpin/v2
     open-pull-requests-limit: 10
     groups:
       go:
@@ -75,18 +69,15 @@ updates:
           - "minor"
           - "patch"
     reviewers:
-      - codingllama
-      - jentfoo
-      - rosstimothy
-      - tcsc
-      - zmb3
+        - Travis Jerome Goff
+    
     labels:
       - "dependencies"
       - "go"
       - "no-changelog"
 
   - package-ecosystem: gomod
-    directory: "/assets/backport"
+    directory: "/assets/"
     schedule:
       interval: weekly
       day: "sunday"
@@ -98,10 +89,7 @@ updates:
           - "minor"
           - "patch"
     reviewers:
-      - codingllama
-      - jentfoo
-      - rosstimothy
-      - zmb3
+       - Travis Jerome Goff
     labels:
       - "dependencies"
       - "go"
@@ -115,7 +103,7 @@ updates:
       time: "09:00" # 9am UTC
     ignore:
       # Forked/replaced dependencies
-      - dependency-name: github.com/alecthomas/kingpin/v2
+      - dependency-name: github.com/VersoriumX/kingpin/v2
     open-pull-requests-limit: 10
     groups:
       go:
@@ -123,11 +111,7 @@ updates:
           - "minor"
           - "patch"
     reviewers:
-      - codingllama
-      - fheinecke
-      - jentfoo
-      - rosstimothy
-      - zmb3
+       - Travis Jerome Goff
     labels:
       - "dependencies"
       - "go"
@@ -146,11 +130,7 @@ updates:
           - "minor"
           - "patch"
     reviewers:
-      - codingllama
-      - ibeckermayer
-      - jentfoo
-      - rosstimothy
-      - zmb3
+      - Travis Jerome Goff
     labels:
       - "dependencies"
       - "rust"
@@ -169,11 +149,7 @@ updates:
           - "minor"
           - "patch"
     reviewers:
-      - codingllama
-      - ibeckermayer
-      - jentfoo
-      - rosstimothy
-      - zmb3
+        - Travis Jerome Goff
     labels:
       - "dependencies"
       - "rust"
@@ -187,10 +163,7 @@ updates:
       time: "09:00"
       timezone: "America/Los_Angeles"
     reviewers:
-      - wadells
-      - jentfoo
-      - fheinecke
-      - camscale
+       - Travis Jerome Goff
     labels:
       - "dependencies"
       - "github_actions"
