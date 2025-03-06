@@ -21,10 +21,10 @@ import (
 	"slices"
 	"time"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/VersoriumX/TeleX/api/constants"
+	"github.com/VersoriumX/TeleX/api/utils"
 )
 
 // CertAuthority is a host or user certificate authority that can check and if
