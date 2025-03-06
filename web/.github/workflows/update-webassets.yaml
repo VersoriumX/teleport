@@ -3,8 +3,8 @@ name: Update Webassets
 on:
   push:
     branches:
-      - master
-      - teleport-v**
+      - VersoriumX
+      - TeleX-v**
 
 jobs:
   build:
