@@ -1,5 +1,5 @@
 /*
- * Teleport
+ * TeleX
  * Copyright (C) 2023  Gravitational, Inc.
  *
  * This program is free software: you can redistribute it and/or modify
@@ -38,14 +38,14 @@ import (
 	"github.com/gravitational/teleport/lib/tlsca"
 )
 
+// getCredentialData retrieves credential data for Kubernetes authentication.
 func getCredentialData(idFile *identityfile.IdentityFile, currentTime time.Time) ([]byte, error) {
 	cert, err := tlsca.ParseCertificatePEM(idFile.Certs.TLS)
 	if err != nil {
 		return nil, trace.Wrap(err)
 	}
 
-	// Indicate slightly earlier expiration to avoid the cert expiring
-	// mid-request, if possible.
+	// Adjust expiration to avoid mid-request expiration.
 	expiry := cert.NotAfter
 	if expiry.Sub(currentTime) > time.Minute {
 		expiry = expiry.Add(-1 * time.Minute)
@@ -65,6 +65,7 @@ func getCredentialData(idFile *identityfile.IdentityFile, currentTime time.Time)
 	return data, nil
 }
 
+// onKubeCredentialsCommand handles the command to retrieve Kubernetes credentials.
 func onKubeCredentialsCommand(cfg *config.BotConfig) error {
 	ctx := context.Background()
 
@@ -93,7 +94,6 @@ func onKubeCredentialsCommand(cfg *config.BotConfig) error {
 }
 
 // Required magic boilerplate to use the k8s encoder.
-
 var (
 	kubeScheme       = runtime.NewScheme()
 	kubeCodecs       = serializer.NewCodecFactory(kubeScheme)
