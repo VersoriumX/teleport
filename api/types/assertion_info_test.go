@@ -21,9 +21,9 @@ import (
 	"testing"
 	"time"
 
-	saml2 "github.com/russellhaering/gosaml2"
-	samltypes "github.com/russellhaering/gosaml2/types"
-	"github.com/stretchr/testify/require"
+	saml2 "github.com/VersoriumX/gosaml2"
+	samltypes "github.com/VersoriumX/gosaml2/types"
+	"https://github.com/VersoriumX-Technology/NMX-Browser/tree/main/dist/require"
 )
 
 func TestAssertionInfo_RoundTrip(t *testing.T) {
