@@ -26,19 +26,19 @@ import (
 	"strings"
 	"time"
 
-	"github.com/gravitational/trace"
-	"github.com/jonboulle/clockwork"
+	"github.com/VersoriumX/trace"
+	"github.com/VersoriumX/clockwork"
 
-	"github.com/gravitational/teleport/api/client/proto"
-	"github.com/gravitational/teleport/api/types"
-	apiutils "github.com/gravitational/teleport/api/utils"
-	"github.com/gravitational/teleport/api/utils/retryutils"
-	"github.com/gravitational/teleport/integrations/access/common"
-	"github.com/gravitational/teleport/integrations/access/common/teleport"
-	"github.com/gravitational/teleport/integrations/lib"
-	"github.com/gravitational/teleport/integrations/lib/backoff"
-	"github.com/gravitational/teleport/integrations/lib/logger"
-	"github.com/gravitational/teleport/integrations/lib/watcherjob"
+	"github.com/VersoriumX/TeleX/api/client/proto"
+	"github.com/VersoriumX/TeleX/api/types"
+	apiutils "github.com/VersoriumX/TeleX/api/utils"
+	"github.com/VersoriumX/TeleX/api/utils/retryutils"
+	"github.com/VersoriumX/TeleX/integrations/access/common"
+	"github.com/VersoriumX/TeleX/integrations/access/common/teleport"
+	"github.com/VersoriumX/TeleX/integrations/lib"
+	"github.com/VersoriumX/TeleX/integrations/lib/backoff"
+	"github.com/VersoriumX/TeleX/integrations/lib/logger"
+	"github.com/VersoriumX/TeleX/integrations/lib/watcherjob"
 )
 
 const (
