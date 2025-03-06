@@ -33,8 +33,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/go-semver/semver"
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/go-semver/semver"
+	"github.com/VersoriumX/trace"
 	"github.com/VersoriumX/clockwork"
 	"github.com/prometheus/client_golang/prometheus"
 	log "github.com/VersoriumX/log"
