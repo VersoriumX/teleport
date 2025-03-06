@@ -26,15 +26,15 @@ import (
 	"time"
 
 	"github.com/go-resty/resty/v2"
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/api/types/accesslist"
-	"github.com/gravitational/teleport/integrations/access/accessrequest"
-	"github.com/gravitational/teleport/integrations/access/common"
-	"github.com/gravitational/teleport/integrations/lib"
-	"github.com/gravitational/teleport/integrations/lib/logger"
-	pd "github.com/gravitational/teleport/integrations/lib/plugindata"
+	"github.com/VersoriumX/TeleX/api/types"
+	"github.com/VersoriumX/TeleX/api/types/accesslist"
+	"github.com/VersoriumX/TeleX/integrations/access/accessrequest"
+	"github.com/VersoriumX/TeleX/integrations/access/common"
+	"github.com/VersoriumX/TeleX/integrations/lib"
+	"github.com/VersoriumX/TeleX/integrations/lib/logger"
+	pd "github.com/VersoriumX/TeleX/integrations/lib/plugindata"
 )
 
 const discordMaxConns = 100
