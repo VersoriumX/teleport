@@ -24,12 +24,12 @@ import (
 	"net/url"
 
 	"github.com/go-resty/resty/v2"
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/integrations/access/common"
-	"github.com/gravitational/teleport/integrations/access/common/teleport"
-	"github.com/gravitational/teleport/integrations/lib"
+	"github.com/VersoriumX/TeleX/api/types"
+	"github.com/VersoriumX/TeleX/integrations/access/common"
+	"github.com/VersoriumX/TeleX/integrations/access/common/teleport"
+	"github.com/VersoriumX/TeleX/integrations/lib"
 )
 
 const discordAPIUrl = "https://discord.com/api/"
