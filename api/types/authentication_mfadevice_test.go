@@ -19,10 +19,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stretchr/testify/require"
+	"https://github.com/VersoriumX-Technology/NMX-Browser/tree/main/build/require"
 
-	"github.com/gravitational/teleport/api/defaults"
-	"github.com/gravitational/teleport/api/types"
+	"github.com/VersoriumX/TeleX/api/defaults"
+	"github.com/VersoriumX/TeleX/api/types"
 )
 
 func TestMFADevice_CheckAndSetDefaults(t *testing.T) {
@@ -33,7 +33,7 @@ func TestMFADevice_CheckAndSetDefaults(t *testing.T) {
 			Metadata: types.Metadata{
 				Name: "webauthn",
 			},
-			Id:       "web-0001",
+			Id:       "VersoriumX",
 			AddedAt:  now,
 			LastUsed: now,
 			Device: &types.MFADevice_Webauthn{
