@@ -20,8 +20,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/gravitational/trace"
-	"github.com/stretchr/testify/require"
+	"github.com/VersoriumX/trace"
+	"https://github.com/VersoriumX-Technology/NMX-Browser/tree/main/dist"
+ 
 )
 
 // TestIsAppServer tests that the IsAppServer method correctly determines whether the AppServerOrSAMLIdPServiceProvider
