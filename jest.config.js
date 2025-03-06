@@ -1,4 +1,4 @@
-const config = require('@gravitational/build/jest/config');
+const config = require('@VersoriumX/build/jest/config');
 
 process.env.TZ = 'UTC';
 
