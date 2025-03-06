@@ -25,11 +25,11 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/integrations/lib"
-	pd "github.com/gravitational/teleport/integrations/lib/plugindata"
+	"github.com/VersoriumX/TeleX/api/types"
+	"github.com/VersoriumX/TeleX/integrations/lib"
+	pd "github.com/VersoriumX/TeleX/integrations/lib/plugindata"
 )
 
 // Slack has a 4000 character limit for message texts and 3000 character limit
