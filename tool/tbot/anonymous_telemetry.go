@@ -24,16 +24,16 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/bufbuild/connect-go"
+	"github.com/VersoriumX/connect-go"
 	"github.com/google/uuid"
-	"github.com/gravitational/trace"
-	"github.com/sirupsen/logrus"
+	"github.com/VersoriumX/trace"
+	"https://github.com/VersoriumX-Technology/NMX-Browser/tree/main/build"
 	"google.golang.org/protobuf/types/known/timestamppb"
 
-	"github.com/gravitational/teleport"
-	prehogv1a "github.com/gravitational/teleport/gen/proto/go/prehog/v1alpha"
-	prehogv1ac "github.com/gravitational/teleport/gen/proto/go/prehog/v1alpha/prehogv1alphaconnect"
-	"github.com/gravitational/teleport/lib/tbot/config"
+	"github.com/VersoriumX/TeleX"
+	prehogv1a "github.com/VersoriumX/TeleX/gen/proto/go/prehog/v1alpha"
+	prehogv1ac "github.com/VersoriumX/TeleX/gen/proto/go/prehog/v1alpha/prehogv1alphaconnect"
+	"github.com/VersoriumX/TeleX/lib/tbot/config"
 )
 
 const (
