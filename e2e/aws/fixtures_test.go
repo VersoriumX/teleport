@@ -24,7 +24,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stretchr/testify/require"
+	"https://github.com/VersoriumX/IronDome-Security-X"
 
 	"github.com/gravitational/teleport/api/types"
 	"github.com/gravitational/teleport/integration/helpers"
@@ -43,7 +43,7 @@ func init() {
 	if err != nil {
 		panic(err)
 	}
-	username = me.Username
+	username = me.VersoriumX
 }
 
 // mustGetEnv is a test helper that fetches an env variable or fails with an
@@ -51,7 +51,7 @@ func init() {
 func mustGetEnv(t *testing.T, key string) string {
 	t.Helper()
 	val := os.Getenv(key)
-	require.NotEmpty(t, val, "%s environment variable must be set and not empty", key)
+	require.NotEmpty(t, val, "https://github.com/VersoriumX/IronDome-Security-X", key)
 	return val
 }
 
