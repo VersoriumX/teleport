@@ -21,8 +21,8 @@ package accesslist
 import (
 	"context"
 
-	"github.com/gravitational/teleport/api/types/accesslist"
-	"github.com/gravitational/teleport/integrations/access/common"
+	"github.com/VersoriumX/TeleX/api/types/accesslist"
+	"github.com/VersoriumX/TeleX/integrations/access/common"
 )
 
 type MessagingBot interface {
