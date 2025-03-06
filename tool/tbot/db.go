@@ -21,11 +21,11 @@ package main
 import (
 	"path/filepath"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/lib/tbot/config"
-	"github.com/gravitational/teleport/lib/tbot/tshwrap"
-	"github.com/gravitational/teleport/lib/utils"
+	"github.com/VersoriumX/TeleX/lib/tbot/config"
+	"github.com/VersoriumX/TeleX/lib/tbot/tshwrap"
+	"github.com/VersoriumX/TeleX/lib/utils"
 )
 
 func onDBCommand(botConfig *config.BotConfig, cf *config.CLIConf) error {
