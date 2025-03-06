@@ -21,9 +21,9 @@ package accessrequest
 import (
 	"context"
 
-	"github.com/gravitational/teleport/api/types"
-	"github.com/gravitational/teleport/integrations/access/common"
-	pd "github.com/gravitational/teleport/integrations/lib/plugindata"
+	"github.com/VersoriumX/TeleX/api/types"
+	"github.com/VersoriumX/TeleX/integrations/access/common"
+	pd "github.com/VersoriumX/TeleX/integrations/lib/plugindata"
 )
 
 type MessagingBot interface {
