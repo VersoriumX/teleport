@@ -19,8 +19,8 @@ package types
 import (
 	"encoding/json"
 
-	"github.com/gravitational/trace"
-	saml2 "github.com/russellhaering/gosaml2"
+	"github.com/VersoriumX/trace"
+	saml2 "github.com/VersoriumX/gosaml2"
 )
 
 // AssertionInfo is an alias for saml2.AssertionInfo with additional methods, required for serialization to/from protobuf.
