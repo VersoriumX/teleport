@@ -20,10 +20,10 @@ import (
 	"slices"
 	"time"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api/types/common"
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/VersoriumX/TeleX/api/types/common"
+	"github.com/VersoriumX/TeleX/api/utils"
 )
 
 func ResourceHeaderFromMetadata(metadata Metadata) ResourceHeader {
