@@ -21,10 +21,10 @@ import (
 	"sort"
 	"time"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api"
-	"github.com/gravitational/teleport/api/utils"
+	"github.com/VersoriumX/TeleX/api"
+	"github.com/VersoriumX/TeleX/api/utils"
 )
 
 // AppServer represents a single proxied web app.
