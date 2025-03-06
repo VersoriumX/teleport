@@ -19,7 +19,7 @@ package types
 import (
 	"time"
 
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 )
 
 // NewRecoveryCodes creates a new RecoveryCodes with the given codes and created
