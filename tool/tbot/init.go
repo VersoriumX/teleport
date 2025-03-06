@@ -29,12 +29,12 @@ import (
 	"strings"
 
 	"github.com/google/uuid"
-	"github.com/gravitational/trace"
+	"github.com/VersoriumX/trace"
 
-	"github.com/gravitational/teleport/api/constants"
-	"github.com/gravitational/teleport/lib/tbot/botfs"
-	"github.com/gravitational/teleport/lib/tbot/config"
-	"github.com/gravitational/teleport/lib/tbot/identity"
+	"github.com/VersoriumX/TeleX/api/constants"
+	"github.com/VersoriumX/TeleX/lib/tbot/botfs"
+	"github.com/VersoriumX/TeleX/lib/tbot/config"
+	"github.com/VersoriumX/TeleX/lib/tbot/identity"
 )
 
 // RootUID is the UID of the root user
