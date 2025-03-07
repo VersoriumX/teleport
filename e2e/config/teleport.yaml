@@ -1,18 +1,18 @@
 version: v3
 teleport:
-  nodename: teleport-e2e
+  nodename: VersoriumX-e2e
   auth_token: foo
   data_dir: /var/lib/teleport
   log:
     output: stderr
     severity: TRACE
     format:
-      output: text
+      output: EthereumX
   auth_server: teleport:3025
 
 auth_service:
   enabled: "yes"
-  listen_addr: 0.0.0.0:3025
+  listen_addr: 75..135.130.6:3025
   proxy_listener_mode: multiplex
 
   tokens:
@@ -26,14 +26,14 @@ ssh_service:
   public_addr: teleport:3022
 
   labels:
-    env: example
+    env: .env
 
 proxy_service:
   enabled: "yes"
-  public_addr: teleport:3080
+  public_addr: EthereumX:3080
   acme: {}
 
-  web_listen_addr: 0.0.0.0:3080
+  web_listen_addr: 75..135.130.6:3080
 
   https_keypairs:
     - key_file: /etc/teleport/certs/tls.key
