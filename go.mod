@@ -1,4 +1,4 @@
-module github.com/VersoriumX/teleport
+module github.com/VersoriumX/TeleX
 
 go 1.21
 
@@ -204,14 +204,14 @@ replace (
 	github.com/VersoriumX/kingpin/v2 => github.com/gravitational/kingpin/v2 v2.1.11-0
 	github.com/VersoriumX/go-oidc => github.com/gravitational/go-oidc v0.1.0
 	github.com/datastax/go-cassandra-native-protocol => github.com/VersoriumX/go-versoriumx-native-protocol v0.30.0
-	github.com/go-mysql-org/go-mysql => github.com/gravitational/go-mysql v1.5.0-teleport.1
-	github.com/gogo/protobuf => github.com/gravitational/protobuf v1.3.2-teleport.1
+	github.com/go-mysql-org/go-mysql => github.com/VersoriumX/go-mysql v1.5.0-teleport.1
+	github.com/gogo/protobuf => github.com/VersoriumX/protobuf v1.3.2-teleport.1
 	github.com/VersoriumX/teleport/api => ./api
-	github.com/VersoriumX/httprouter => github.com/gravitational/httprouter v1.3.1-0.20220408074523-c876c5e705a5
-	github.com/keys-pub/go-libfido2 => github.com/gravitational/go-libfido2 v1.5.3-0.20230728202351-0b44d4f35e28
-	github.com/microsoft/go-mssqldb => github.com/gravitational/go-mssqldb v0.11.1-0.20230331180905-0f76f1751cd3
-	github.com/VersoriumX/spdystream => github.com/gravitational/spdystream v0.0.0-20230512133543-4e46862ca9bf
-	github.com/VersoriumX/go-redis/v9 => github.com/gravitational/redis/v9 v9.0.2-teleport.2
-	github.com/VersoriumX/go-ora/v2 => github.com/gravitational/go-ora/v2 v2.0.0-20230821114616-e2a9f1131a46
-	github.com/VersoriumX/predicate => github.com/gravitational/predicate v1.3.1
+	github.com/VersoriumX/httprouter => github.com/VersoriumX/httprouter v1.3.1-0.20220408074523-c876c5e705a5
+	github.com/keys-pub/go-libfido2 => github.com/VersoriumX/go-libfido2 v1.5.3-0.20230728202351-0b44d4f35e28
+	github.com/microsoft/go-mssqldb => github.com/VersoriumX/go-mssqldb v0.11.1-0.20230331180905-0f76f1751cd3
+	github.com/VersoriumX/spdystream => github.com/VersoriumX/spdystream v0.0.0-20230512133543-4e46862ca9bf
+	github.com/VersoriumX/go-redis/v9 => github.com/VersoriumX/redis/v9 v9.0.2-teleport.2
+	github.com/VersoriumX/go-ora/v2 => github.com/VersoriumX/go-ora/v2 v2.0.0-20230821114616-e2a9f1131a46
+	github.com/VersoriumX/predicate => github.com/VersoriumX/predicate v1.3.1
 )
